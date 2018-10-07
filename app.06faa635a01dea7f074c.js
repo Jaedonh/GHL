@@ -1834,8 +1834,8 @@ webpackJsonp([1, 0], [function (e, t, a) {
 			var r = (0, d.
 				default)(this, (t.__proto__ || (0, s.
 					default)(t)).call(this, e, a, new L));
-			r.xpPerHourStat = n, r.nextLevelAtXp = i, r.groundhogFactorStat = new x(r.id + "_groundhogFactorStat", "Groundhog Factor", r);
-			var o = new b.StatEffectiveMultModifier(r.id + "_groundhogFactorMod", "Groundhog Factor", 100, r.groundhogFactorStat);
+			r.xpPerHourStat = n, r.nextLevelAtXp = i, r.groundhogFactorStat = new x(r.id + "_groundhogFactorStat", "土拨鼠因素", r);
+			var o = new b.StatEffectiveMultModifier(r.id + "_groundhogFactorMod", "土拨鼠因素", 100, r.groundhogFactorStat);
 			r.xpPerHourStat.addModifier(o), r.xpPerDayStat = new M.Stat(r.id + "_xppday", r.name + " 经验/天", 0, 2);
 			var u = new b.StatEffectiveAddModifier(r.id + "_xphour2day", "经验/小时", 1, r.xpPerHourStat);
 			return r.xpPerDayStat.addModifier(u), r.levelUp = !1, r.lastLevelUp = -1, r.update(), r
@@ -2176,24 +2176,24 @@ webpackJsonp([1, 0], [function (e, t, a) {
 		r = a(11),
 		o = a(175),
 		s = t.dailyExpensesStat = new n.Stat("dailyExpensesStat", "开销", 0, 2, "$", "", !1),
-		u = new r.StatEffectiveAddModifier(s.id + "_foodCostsPerDayMod", "Food", 1, i.foodCostsPerDayStat);
+		u = new r.StatEffectiveAddModifier(s.id + "_foodCostsPerDayMod", "食物", 1, i.foodCostsPerDayStat);
 	s.addModifier(u), s.update();
 	var l = t.dailyIncomeStat = new n.Stat("dailyIncomeStat", "收入/每天", 0, 2, "$"),
-		c = new r.StatEffectiveAddModifier(l.id + "_workIncomePerDayMod", "Work", 1, o.dailyWorkIncomeStat);
+		c = new r.StatEffectiveAddModifier(l.id + "_workIncomePerDayMod", "工作", 1, o.dailyWorkIncomeStat);
 	l.addModifier(c), l.update();
 	var d = t.dailyNetIncomeStat = new n.Stat("dailyNetIncome", "净收入/每天", 0, 2, "$", ""),
-		f = new r.StatEffectiveAddModifier(d.id + "_incomePerDayMod", "Income", 1, l),
-		v = new r.StatEffectiveAddModifier(d.id + "_expensesPerDayMod", "Expenses", 2, s, function (e) {
+		f = new r.StatEffectiveAddModifier(d.id + "_incomePerDayMod", "收入", 1, l),
+		v = new r.StatEffectiveAddModifier(d.id + "_expensesPerDayMod", "支出", 2, s, function (e) {
 			return -e
 		});
 	d.addModifier(f), d.addModifier(v), d.update();
-	var h = t.expenseRatioStat = new n.Stat("expenseRatioStat", "Expense Ratio", 1, 2),
-		p = new r.StatEffectiveMultModifier(h.id + "_incomePerDayMod", "Income", 1, l, function (e) {
+	var h = t.expenseRatioStat = new n.Stat("expenseRatioStat", "开支比率", 1, 2),
+		p = new r.StatEffectiveMultModifier(h.id + "_incomePerDayMod", "收入", 1, l, function (e) {
 			return 1 / (e + 1)
 		}),
-		m = new r.StatEffectiveMultModifier(h.id + "_expensesPerDayMod", "Expenses", 2, s);
+		m = new r.StatEffectiveMultModifier(h.id + "_expensesPerDayMod", "支出", 2, s);
 	h.addModifier(p), h.addModifier(m), h.update();
-	t.investmentReturnStat = new n.Stat("investmentReturnStat", "Investment Annual Returns", .01, 3, "", "%")
+	t.investmentReturnStat = new n.Stat("investmentReturnStat", "投资年回报率", .01, 3, "", "%")
 }, , , , , , function (e, t, a) {
 	"use strict";
 
@@ -2667,11 +2667,11 @@ webpackJsonp([1, 0], [function (e, t, a) {
 					default)(this, t);
 				var e = (0, d.
 					default)(this, (t.__proto__ || (0, r.
-						default)(t)).call(this, "foodCostFactor", "Food Cost Factor", 1, !0, 1, 10));
+						default)(t)).call(this, "foodCostFactor", "食品成本因素", 1, !0, 1, 10));
 				e.setValue(1, !0);
-				var a = new y.NumberStateModifier("foodCostFactorStatMod", "Food Cost Factor", 2, e);
+				var a = new y.NumberStateModifier("foodCostFactorStatMod", "食品成本因素", 2, e);
 				g.foodCostsPerDayStat.addModifier(a);
-				var n = new y.NumberStateModifier("foodCostFactorEnergyMod", "Food Cost", 2, e, function (e) {
+				var n = new y.NumberStateModifier("foodCostFactorEnergyMod", "食物成本", 2, e, function (e) {
 					return 1 + (e - 1) / 20
 				});
 				return _.energyStat.addModifier(n), e.update(), e
@@ -3125,10 +3125,10 @@ webpackJsonp([1, 0], [function (e, t, a) {
 					default)(this, (t.__proto__ || (0, r.
 						default)(t)).call(this, e, a, new k(c, o)));
 				d.description = n, d.rent = new p.Stat(d.id + "_rent", d.name + " Rent", i, 2, "$", "/天");
-				var f = new y.StatEffectiveAddModifier(d.id + "_rent_expense_mod", "Rent for " + d.name, 1, d.rent);
-				(0, _.createSelectedLock)(d, f), g.dailyExpensesStat.addModifier(f), d.initialCost = new p.Stat(d.id + "initial_cost", "初始花费", o, 0, "$"), d.originalInitialCost = o, d.choresTime = new p.Stat(d.id + "_chores", "家务", s, 0, "", " 分钟/天", !0, !0, 0);
-				var h = new y.StatEffectiveAddModifier(d.id + "_chores_mod", "Chores at " + d.name, 1, d.choresTime);
-				return (0, _.createSelectedLock)(d, h), b.chores.duration.addModifier(h), d.quality = new p.Stat(d.id + "_quality", "Home Quality", u, 0), c && (m.currentHomeContainer.home = d, m.currentHomeContainer.update()), d
+				var f = new y.StatEffectiveAddModifier(d.id + "_rent_expense_mod", "租用 " + d.name, 1, d.rent);
+				(0, _.createSelectedLock)(d, f), g.dailyExpensesStat.addModifier(f), d.initialCost = new p.Stat(d.id + "initial_cost", "押金", o, 0, "$"), d.originalInitialCost = o, d.choresTime = new p.Stat(d.id + "_chores", "家务", s, 0, "", " 分钟/天", !0, !0, 0);
+				var h = new y.StatEffectiveAddModifier(d.id + "_chores_mod", "家务 " + d.name, 1, d.choresTime);
+				return (0, _.createSelectedLock)(d, h), b.chores.duration.addModifier(h), d.quality = new p.Stat(d.id + "_quality", "住宅品质", u, 0), c && (m.currentHomeContainer.home = d, m.currentHomeContainer.update()), d
 			}
 			return (0, d.
 				default)(t, e), (0, s.
@@ -3474,8 +3474,8 @@ webpackJsonp([1, 0], [function (e, t, a) {
 	var p = new n.Boost("boost_spa", "泡温泉", "双倍的精力持续 4 个月", 120, 1460),
 		m = new o.MultModifier("boost_spaMod", "Visited Spa", 10, 2);
 	(0, s.createSelectedLock)(p, m), i.energyStat.addModifier(m);
-	var y = new n.Boost("boost_conference", "Go to Conference", "Double Research Output for 6 Months", 180, 1825),
-		g = new o.MultModifier("boost_conferenceMod", "Visited Conference", 10, 2);
+	var y = new n.Boost("boost_conference", "参加会议", "双倍研究成果持续6个月", 180, 1825),
+		g = new o.MultModifier("boost_conferenceMod", "访问会议", 10, 2);
 	(0, s.createSelectedLock)(y, g), (0, s.createLevelLock)(c.studySkills, y, 10), r.baseResearchXpPerHourStat.addModifier(g);
 	t.boosts = [d, v, p, y]
 }, function (e, t, a) {
@@ -5172,7 +5172,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
 				default)(this, t);
 			var a = (0, d.
 				default)(this, (t.__proto__ || (0, r.
-					default)(t)).call(this, e.id + "jobLevelMod", "Job Level", 10, 1));
+					default)(t)).call(this, e.id + "jobLevelMod", "工作等级", 10, 1));
 			return a.xp = e.xp, a.xp.dependants.push(a), a.update(), a
 		}
 		return (0, p.
@@ -5359,7 +5359,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
 			}
 		},
 		w = function () {
-			var e = new s.GenericAddModifier("investment_income_per_day_mod", "Investments", 2, f.money, function (e) {
+			var e = new s.GenericAddModifier("investment_income_per_day_mod", "投资", 2, f.money, function (e) {
 				return e.getValue() * (Math.pow(1 + o.investmentReturnStat.effective, 1 / 365) - 1)
 			});
 			o.dailyIncomeStat.addModifier(e), o.investmentReturnStat.subscribe(e)
@@ -5371,7 +5371,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
 						n = e * (.5 + .25 * (t - a));
 					return n = Math.max(n, 0), n = Math.min(n, e)
 				},
-				a = new s.GenericAddModifier("happinessFromHomeFactorMod", "Home (Max 0.6)", 1, c.currentHomeContainer, function (e) {
+				a = new s.GenericAddModifier("happinessFromHomeFactorMod", "家 (上限 0.6)", 1, c.currentHomeContainer, function (e) {
 					return t(e.home.quality.effective)
 				});
 			v.happinessStat.addModifier(a), a.explain = function () {
@@ -5385,11 +5385,11 @@ webpackJsonp([1, 0], [function (e, t, a) {
 					var t = e / 60;
 					return t >= 9 ? n : t > 4 ? n * (t - 4) / 5 : 0
 				},
-				r = new s.StatEffectiveAddModifier("happinessFromSleepHoursMod", "Sleep (Max 0.5)", 1, u.sleep.duration, i);
+				r = new s.StatEffectiveAddModifier("happinessFromSleepHoursMod", "睡眠 (上限 0.5)", 1, u.sleep.duration, i);
 			v.happinessStat.addModifier(r), r.explain = function () {
 				return u.sleep.duration.effective >= 540 ? "显然有了足够的睡眠" : u.sleep.duration.effective <= 300 ? "必须……睡觉了。" : "足够的睡眠。"
 			};
-			var f = new s.MultModifier("sleepDeprivation", "Sleep Deprivation", 10, 0);
+			var f = new s.MultModifier("sleepDeprivation", "睡眠剥夺", 10, 0);
 			v.happinessStat.addModifier(f);
 			var p = function () {
 				return u.sleep.duration.effective < 240
@@ -5397,13 +5397,13 @@ webpackJsonp([1, 0], [function (e, t, a) {
 			(0, l.createCustomLock)([u.sleep.duration], f, p), f.explain = function () {
 				return p() ? "Sleep Deprivation." : ""
 			};
-			var m = new h.Stat("happinessFromExpenseRatioStat", "Happiness from Expense Ratio", .3, 2),
+			var m = new h.Stat("happinessFromExpenseRatioStat", "源自开支比率的幸福指数", .3, 2),
 				y = function (e) {
 					return o.dailyExpensesStat.effective > 2e3 ? 1 : e > 1 ? 1 / Math.pow(e, 3) : e > .9 ? 1 : Math.pow(Math.max(0, e) / .9, 2)
 				},
-				g = new s.StatEffectiveMultModifier("expenseRatioHappinessMod", "Expense Ratio", 10, o.expenseRatioStat, y);
+				g = new s.StatEffectiveMultModifier("expenseRatioHappinessMod", "开支比率", 10, o.expenseRatioStat, y);
 			m.addModifier(g);
-			var _ = new s.StatEffectiveAddModifier("happinessFromExpenseRatioMod", "Happiness from Expense Ratio (Max: 0.3)", 1, m);
+			var _ = new s.StatEffectiveAddModifier("happinessFromExpenseRatioMod", "源自开支比率的幸福指数 (上限: 0.3)", 1, m);
 			v.happinessStat.addModifier(_), _.explain = function () {
 				var e = o.expenseRatioStat.effective;
 				return o.dailyExpensesStat.effective > 2e3 ? "对我的开销很满意。" : e < .7 ? "买得起更好的东西……" : e > 1.2 ? "花钱花的太多了。" : e <= 1 ? "对我的开销很满意。" : "Spending a little too much maybe."
@@ -5413,7 +5413,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
 				k = new s.StatEffectiveAddModifier("researchHoursMod", "Researching", 1, u.research.duration),
 				w = new s.StatEffectiveAddModifier("choresHoursMod", "家务", 1, u.chores.duration);
 			M.addModifier(b), M.addModifier(k), M.addModifier(w);
-			var L = new s.StatEffectiveAddModifier("happinessFromWorkLifeBalanceMod", "Work-Life Balance (Max: 0.6)", 1, M, function (e) {
+			var L = new s.StatEffectiveAddModifier("happinessFromWorkLifeBalanceMod", "工作与生活的平衡 (上限: 0.6)", 1, M, function (e) {
 				return 216 / Math.max(e, 360)
 			});
 			v.happinessStat.addModifier(L), L.explain = function () {
@@ -5423,7 +5423,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
 		};
 	t.setupGame = function () {
 		w();
-		var e = new s.NumberStateModifier("mod_aacounter_energy", "Times anomaly averted", 10, m.aaCounter, function (e) {
+		var e = new s.NumberStateModifier("mod_aacounter_energy", "避免时间异常", 10, m.aaCounter, function (e) {
 			return e + 1
 		});
 		p.energyStat.addModifier(e), L(), b(), k()
@@ -5536,7 +5536,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
 				default)(this, t);
 			var n = (0, l.
 				default)(this, (t.__proto__ || (0, r.
-					default)(t)).call(this, e.id + "incpH", "Income/h", a, 2, "$", ""));
+					default)(t)).call(this, e.id + "incpH", "收入/小时", a, 2, "$", ""));
 			return n.job = e, n.base = a, n.addModifier(new v.JobLevelModifier(e)), n.update(), n
 		}
 		return (0, d.
@@ -7542,7 +7542,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
 				staticStyle: {
 					width: "10rem"
 				}
-			}, [e._v("加速因子")])])
+			}, [e._v("加速因素")])])
 		}, function () {
 			var e = this,
 				t = e.$createElement,
@@ -7563,7 +7563,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
 				staticStyle: {
 					width: "10rem"
 				}
-			}, [e._v("加速因子")])])
+			}, [e._v("加速因素")])])
 		}]
 	}
 }, function (e, t) {
@@ -8089,7 +8089,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
 				staticClass: "modal-content"
 			}, [a("h5", {
 				staticClass: "modal-title"
-			}, [e._v(e._s(e.stat.name))]), e._v(" "), a("table", [e._m(0), e._v(" "), a("tr", [a("td", [e._v(" Base Value ")]), e._v(" "), a("td"), e._v(" "), a("td", {
+			}, [e._v(e._s(e.stat.name))]), e._v(" "), a("table", [e._m(0), e._v(" "), a("tr", [a("td", [e._v(" 基础数值 ")]), e._v(" "), a("td"), e._v(" "), a("td", {
 				staticClass: "text-right"
 			}, [e._v(e._s(e.stat.prefix + e.stat.base.toFixed(e.stat.digits) + e.stat.suffix))])]), e._v(" "), e._l(e.stat.modifiersWithValues(), function (t) {
 				return t[0].unlocked() ? a("tr", [a("td", [e._v(" " + e._s(t[0].name) + " ")]), e._v(" "), a("td", {
@@ -8101,7 +8101,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
 				}, [e._v(" " + e._s(t[0].operationString + t[0].factor.toFixed(t[0].digits)) + " ")]), e._v(" "), a("td", {
 					staticClass: "text-right"
 				}, [e._v(" " + e._s(e.stat.prefix + t[1].toFixed(e.stat.digits) + e.stat.suffix))])]) : e._e()
-			}), e._v(" "), a("tr", [a("td", [e._v(" Effective Value ")]), e._v(" "), a("td"), e._v(" "), a("td", {
+			}), e._v(" "), a("tr", [a("td", [e._v(" 有效数值 ")]), e._v(" "), a("td"), e._v(" "), a("td", {
 				staticClass: "text-right"
 			}, [a("b", [e._v(e._s(e.stat.prefix + e.stat.effective.toFixed(e.stat.digits) + e.stat.suffix))])])])], 2)])])])], 1)
 		},
@@ -8109,7 +8109,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
 			var e = this,
 				t = e.$createElement,
 				a = e._self._c || t;
-			return a("tr", [a("th", [e._v("Modifier")]), a("th", [e._v("Factor")]), a("th", [e._v("Value")])])
+			return a("tr", [a("th", [e._v("项目")]), a("th", [e._v("因素")]), a("th", [e._v("数值")])])
 		}]
 	}
 }, function (e, t) {
