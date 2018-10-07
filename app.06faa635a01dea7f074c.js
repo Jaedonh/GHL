@@ -2430,19 +2430,19 @@ webpackJsonp([1, 0], [function (e, t, a) {
 		i = a(74),
 		r = a(9),
 		o = a(47),
-		s = t.labCleaner = new n.Job("dp1", "Lab Cleaner"),
-		u = t.labAssistant = new n.Job("dp2", "Lab Assistant"),
-		l = t.juniorScientist = new n.Job("dp3", "Junior Scientist"),
-		c = t.scientist = new n.Job("dp4", "Scientist"),
-		d = t.seniorScientist = new n.Job("dp5", "Senior Scientist"),
-		f = t.labSupervisor = new n.Job("dp6", "Lab Supervisor"),
-		v = t.lambdaComplexTrainee = new n.Job("dp7", "Lambda Trainee"),
-		h = t.lambdaComplexScientist = new n.Job("dp8", "Lambda Scientist"),
-		p = t.lambdaComplexChief = new n.Job("dp9", "Lambda Chief"),
-		m = t.darkPlateauCeo = new n.Job("dp10", "CEO"),
+		s = t.labCleaner = new n.Job("dp1", "实验室清洁工"),
+		u = t.labAssistant = new n.Job("dp2", "实验室助理"),
+		l = t.juniorScientist = new n.Job("dp3", "青年科学家"),
+		c = t.scientist = new n.Job("dp4", "科学家"),
+		d = t.seniorScientist = new n.Job("dp5", "资深科学家"),
+		f = t.labSupervisor = new n.Job("dp6", "实验室主管"),
+		v = t.lambdaComplexTrainee = new n.Job("dp7", "λ培训生"),
+		h = t.lambdaComplexScientist = new n.Job("dp8", "λ科学家"),
+		p = t.lambdaComplexChief = new n.Job("dp9", "λ厨师"),
+		m = t.darkPlateauCeo = new n.Job("dp10", "总裁"),
 		y = [s, u, l, c, d, f, v, h, p, m];
 	(0, o.configureXpProgression)(y, 2500, 2, 8), (0, n.configurePayProgression)(y, 30, 400, 2), (0, r.createLevelLockChain)(y, 10);
-	t.darkPlateau = new i.Career("dark_plateau", "Dark Plateau", y)
+	t.darkPlateau = new i.Career("dark_plateau", "黑暗森林", y)
 }, function (e, t, a) {
 	"use strict";
 
@@ -3468,14 +3468,14 @@ webpackJsonp([1, 0], [function (e, t, a) {
 		d = new n.Boost("boost_coffeine", "大量咖啡因", "双倍精力持续2个月", 60, 730),
 		f = new o.MultModifier("coffeine_mod", "大量咖啡因", 10, 2);
 	(0, s.createSelectedLock)(d, f), (0, s.createLevelLock)(u.nutrition, d, 10), i.energyStat.addModifier(f);
-	var v = new n.Boost("boost_organize", "Organize your Stuff", "双倍精力持续3个月", 90, 1095),
-		h = new o.MultModifier("boost_organize_mod", "Organized your Stuff", 10, 2);
+	var v = new n.Boost("boost_organize", "整理东西", "双倍精力持续3个月", 90, 1095),
+		h = new o.MultModifier("boost_organize_mod", "整理你的东西", 10, 2);
 	(0, s.createSelectedLock)(v, h), (0, s.createLevelLock)(l.getStuffDone, v, 10), i.energyStat.addModifier(h);
 	var p = new n.Boost("boost_spa", "泡温泉", "双倍的精力持续 4 个月", 120, 1460),
-		m = new o.MultModifier("boost_spaMod", "Visited Spa", 10, 2);
+		m = new o.MultModifier("boost_spaMod", "已泡温泉", 10, 2);
 	(0, s.createSelectedLock)(p, m), i.energyStat.addModifier(m);
 	var y = new n.Boost("boost_conference", "参加会议", "双倍研究成果持续6个月", 180, 1825),
-		g = new o.MultModifier("boost_conferenceMod", "访问会议", 10, 2);
+		g = new o.MultModifier("boost_conferenceMod", "访问议会", 10, 2);
 	(0, s.createSelectedLock)(y, g), (0, s.createLevelLock)(c.studySkills, y, 10), r.baseResearchXpPerHourStat.addModifier(g);
 	t.boosts = [d, v, p, y]
 }, function (e, t, a) {
@@ -3545,7 +3545,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
 		}, function () {
 			return b.freeTime.duration.effective >= 60 + Math.min(0, L.currentHomeContainer.home.choresTime.rawEffective)
 		}),
-		S = new M.AddModifier("cleaner_mod", "Cleaner", 1, -60);
+		S = new M.AddModifier("cleaner_mod", "清洁工", 1, -60);
 	(0, _.createTrueStateLock)(P, S);
 	var A = t.servant = new x("assistant_servant", "全职佣人", "减少你的家务时间五小时", 1e3, function () {
 		return !0
@@ -5406,11 +5406,11 @@ webpackJsonp([1, 0], [function (e, t, a) {
 			var _ = new s.StatEffectiveAddModifier("happinessFromExpenseRatioMod", "源自开支比率的幸福指数 (上限: 0.3)", 1, m);
 			v.happinessStat.addModifier(_), _.explain = function () {
 				var e = o.expenseRatioStat.effective;
-				return o.dailyExpensesStat.effective > 2e3 ? "对我的开销很满意。" : e < .7 ? "买得起更好的东西……" : e > 1.2 ? "花钱花的太多了。" : e <= 1 ? "对我的开销很满意。" : "Spending a little too much maybe."
+				return o.dailyExpensesStat.effective > 2e3 ? "对我的开销很满意。" : e < .7 ? "买得起更好的东西……" : e > 1.2 ? "花钱花的太多了。" : e <= 1 ? "对我的开销很满意。" : "花钱可能有点太多了。"
 			};
-			var M = new h.Stat("totalWorkingHours", "Working, studying, researching", 0, 2),
-				b = new s.StatEffectiveAddModifier("workHoursMod", "Working", 1, u.work.duration),
-				k = new s.StatEffectiveAddModifier("researchHoursMod", "Researching", 1, u.research.duration),
+			var M = new h.Stat("totalWorkingHours", "工作，学习，研究", 0, 2),
+				b = new s.StatEffectiveAddModifier("workHoursMod", "工作中", 1, u.work.duration),
+				k = new s.StatEffectiveAddModifier("researchHoursMod", "研究中", 1, u.research.duration),
 				w = new s.StatEffectiveAddModifier("choresHoursMod", "家务", 1, u.chores.duration);
 			M.addModifier(b), M.addModifier(k), M.addModifier(w);
 			var L = new s.StatEffectiveAddModifier("happinessFromWorkLifeBalanceMod", "工作与生活的平衡 (上限: 0.6)", 1, M, function (e) {
@@ -7197,7 +7197,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
 				staticStyle: {
 					width: "3rem"
 				}
-			}, [e._v("最高等级")]) : e._e()]), e._v(" "), e._l(e.researchPane.subpanes, function (t) {
+			}, [e._v("历史最高等级")]) : e._e()]), e._v(" "), e._l(e.researchPane.subpanes, function (t) {
 				return a("tbody", {
 					staticClass: "table-cat",
 					attrs: {
@@ -7903,7 +7903,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
 				staticStyle: {
 					width: "3rem"
 				}
-			}, [e._v("最高等级")]) : e._e()]), e._v(" "), e._l(e.jobPane.subpanes, function (t) {
+			}, [e._v("历史最高等级")]) : e._e()]), e._v(" "), e._l(e.jobPane.subpanes, function (t) {
 				return t.career.unlocked() ? a("tbody", {
 					staticClass: "table-cat",
 					attrs: {
