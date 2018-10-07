@@ -2041,16 +2041,16 @@ webpackJsonp([1, 0], [function (e, t, a) {
 		i = a(74),
 		r = a(9),
 		o = a(47),
-		s = t.unpaidIntern = new n.Job("yugle1", "Unpaid Intern"),
-		u = t.juniorDeveloper = new n.Job("yugle2", "Junior Developer"),
-		l = t.softwareEngineer = new n.Job("yugle3", "Software Engineer"),
-		c = t.projectLead = new n.Job("yugle4", "Project Lead"),
-		d = t.teamLead = new n.Job("yugle5", "Team Lead"),
-		f = t.seniorArchitect = new n.Job("yugle6", "Senior Architect"),
-		v = t.divisionLead = new n.Job("yugle7", "Division Lead"),
-		h = t.productManager = new n.Job("yugle8", "Product Manager"),
-		p = t.cto = new n.Job("yugle9", "CTO"),
-		m = t.yugleCeo = new n.Job("yugle10", "CEO"),
+		s = t.unpaidIntern = new n.Job("yugle1", "无薪实习生"),
+		u = t.juniorDeveloper = new n.Job("yugle2", "初级开发人员"),
+		l = t.softwareEngineer = new n.Job("yugle3", "软件工程师"),
+		c = t.projectLead = new n.Job("yugle4", "项目领导"),
+		d = t.teamLead = new n.Job("yugle5", "团队领导"),
+		f = t.seniorArchitect = new n.Job("yugle6", "高级规划师"),
+		v = t.divisionLead = new n.Job("yugle7", "部门领导"),
+		h = t.productManager = new n.Job("yugle8", "产品经理"),
+		p = t.cto = new n.Job("yugle9", "首席技术官"),
+		m = t.yugleCeo = new n.Job("yugle10", "总裁"),
 		y = [s, u, l, c, d, f, v, h, p, m];
 	(0, o.configureXpProgression)(y, 1e3, 2, 8), (0, n.configurePayProgression)(y, 10, 300, 2), s.setBasePay(0), (0, r.createLevelLockChain)(y, 10);
 	t.yugle = new i.Career("yugle", "尤格", y)
@@ -2099,7 +2099,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
 									if (this.home.choresTime.effective < e.choresTime.effective && e.choresTime.effective - this.home.choresTime.effective > g.freeTime.duration.effective) return;
 									if (a && !e.enoughMoney()) return
 								}
-								this.home && this.home.deactivate(), this.home = e, this.home.activate(a), y.log.info("You got a new home: " + this.home.name, this.id, y.log.HOMESELECTED), (0, v.
+								this.home && this.home.deactivate(), this.home = e, this.home.activate(a), y.log.info("你得到了一个新家: " + this.home.name, this.id, y.log.HOMESELECTED), (0, v.
 									default)(t.prototype.__proto__ || (0, r.
 										default)(t.prototype), "update", this).call(this)
 							}
@@ -3177,14 +3177,14 @@ webpackJsonp([1, 0], [function (e, t, a) {
 		}(h.BasicEntity),
 		L = t.parentsBasement = new w("home_parentsBasement", "父母家", "直到你获得自己的住所", 10, 0, 30, 1, !0),
 		C = new w("home_sharedApartment", "合租公寓", "水槽里的是什么东西？", 25, 500, 60, 2),
-		x = new w("home_studioApartment", "单间公寓", "这既是客厅。也是厨房。还是卧室。", 50, 1e3, 90, 3),
-		P = new w("home_tinyApartment", "Tiny Apartment", "Two rooms!", 70, 2e3, 120, 4),
-		S = new w("home_regularApartment", "Normal Apartment", "Just a normal apartment in an ordinary neighbourhood.", 100, 6e3, 150, 5),
-		A = new w("home_fancyApartment", "Fancy Apartment", "Look at that shower!", 200, 1e4, 180, 6),
-		E = new w("home_penthouse", "Penthouse", "On top of things.", 400, 2e4, 210, 7),
-		I = new w("home_smallHouse", "Small House", "Five rooms!", 600, 25e3, 240, 8),
-		N = new w("home_house", "House", "A house.", 800, 4e4, 270, 9),
-		T = new w("home_mansion", "Mansion", "Living like a king, except no style.", 1e3, 5e4, 300, 10);
+		x = new w("home_studioApartment", "胶囊公寓", "这既是客厅。也是厨房。还是卧室。", 50, 1e3, 90, 3),
+		P = new w("home_tinyApartment", "单身公寓", "两个房间!", 70, 2e3, 120, 4),
+		S = new w("home_regularApartment", "普通公寓", "只是普通街区的普通公寓.", 100, 6e3, 150, 5),
+		A = new w("home_fancyApartment", "高档公寓", "看看那花洒!", 200, 1e4, 180, 6),
+		E = new w("home_penthouse", "顶层公寓", "俯瞰全城.", 400, 2e4, 210, 7),
+		I = new w("home_smallHouse", "小房子", "五个房间!", 600, 25e3, 240, 8),
+		N = new w("home_house", "房子", "一栋房子.", 800, 4e4, 270, 9),
+		T = new w("home_mansion", "宅邸", "生活像国王一样,只不过没有臣民.", 1e3, 5e4, 300, 10);
 	t.homes = [L, C, x, P, S, A, E, I, N, T]
 }, function (e, t, a) {
 	"use strict";
@@ -5068,7 +5068,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
 	var n = a(61),
 		i = a(108),
 		r = a(167);
-	t.business = new n.Field("business", "事务", [i.leadership, r.investment])
+	t.business = new n.Field("business", "商业", [i.leadership, r.investment])
 }, function (e, t, a) {
 	"use strict";
 	Object.defineProperty(t, "__esModule", {
@@ -5094,7 +5094,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
 		l = t.alg2 = new i.Book("alg2", "Algorithm Design Manual", "How to implement algorithms well.", 500, "1848000693"),
 		c = t.alg3 = new i.Book("alg3", "Concrete Mathematics", "Finetuning your Skills", 2e3, "0201558025");
 	(0, n.createCompletedOrReadingListLock)(u, l), (0, n.createCompletedOrReadingListLock)(l, c);
-	var d = t.alg = new r.Area("area_alg", "Algorithms", [u, l, c]),
+	var d = t.alg = new r.Area("area_alg", "算法", [u, l, c]),
 		f = new o.LevelAddMultModifier("alg_research_level_mod", "研究：算法", 2, d.xp, .01);
 	s.programming.xp.xpPerHourStat.addModifier(f), d.effect = "+1% 编程研究速度"
 }, function (e, t, a) {
@@ -5126,8 +5126,8 @@ webpackJsonp([1, 0], [function (e, t, a) {
 		f = t.se4 = new i.Book("se4", "Design Patterns", "Don't reinvent the wheel. You will probably make it square-shaped.", 250, "0201633612"),
 		v = t.se5 = new i.Book("se5", "Working with Legacy Code", "Boooring. Or is it?", 250, "0131177052");
 	(0, n.createCompletedOrReadingListLock)(l, c), (0, n.createCompletedOrReadingListLock)(c, d), (0, n.createCompletedOrReadingListLock)(d, f), (0, n.createCompletedOrReadingListLock)(f, v);
-	var h = t.se = new r.Area("area_se", "Software Engineering", [l, c, d, f, v]),
-		p = new o.LevelAddMultModifier("se_research_level_mod", "Research: Software Engineering", 2, h.xp, .01);
+	var h = t.se = new r.Area("area_se", "软件工程", [l, c, d, f, v]),
+		p = new o.LevelAddMultModifier("se_research_level_mod", "研究: 软件工程", 2, h.xp, .01);
 	s.programming.xp.xpPerHourStat.addModifier(p), h.effect = "+1% 编程研究速度", (0, n.createLevelLock)(h, u.softwareEngineer, 5)
 }, function (e, t, a) {
 	"use strict";
@@ -7504,7 +7504,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
 			var e = this,
 				t = e.$createElement,
 				a = e._self._c || t;
-			return a("div", [a("h5", [e._v("Previous Life")]), e._v("\n  The highest levels reached in previous lives."), a("br"), e._v("\n  Reaching higher levels increases your progress speed in future lives."), a("br"), a("br"), e._v(" "), a("h3", [e._v("Career")]), e._v(" "), e._l(e.careers, function (t) {
+			return a("div", [a("h5", [e._v("上个轮回")]), e._v("\n  在前世中达到的最高等级。"), a("br"), e._v("\n  达到更高的等级会加速你在未来的进度。"), a("br"), a("br"), e._v(" "), a("h3", [e._v("事业")]), e._v(" "), e._l(e.careers, function (t) {
 				return t.jobs[0].xp.state.highestLevelEver > 0 ? a("div", {}, [a("div", {
 					staticClass: "row"
 				}, [a("h5", [e._v(e._s(t.name))]), a("br")]), e._v(" "), a("table", [e._m(0, !0), e._v(" "), e._l(t.jobs, function (t) {
@@ -7512,7 +7512,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
 						class: t.xp.recordClass()
 					}, [a("td", [e._v(e._s(t.name))]), e._v(" "), a("td", [e._v(e._s(t.xp.previousLevelReached()))]), e._v(" "), a("td", [e._v(e._s(t.xp.state.highestLevelThisLoop))]), e._v(" "), a("td", [e._v(e._s(t.xp.computePrestigeFactor()))])]) : e._e()
 				})], 2), e._v(" "), a("br")]) : e._e()
-			}), e._v(" "), a("br"), e._v(" "), a("h3", [e._v("Research")]), e._v(" "), e._l(e.fields, function (t) {
+			}), e._v(" "), a("br"), e._v(" "), a("h3", [e._v("研究")]), e._v(" "), e._l(e.fields, function (t) {
 				return a("div", [a("div", {
 					staticClass: "row"
 				}, [a("h5", [e._v(e._s(t.name))])]), e._v(" "), a("table", [e._m(1, !0), e._v(" "), e._l(t.areas, function (t) {
@@ -7530,19 +7530,19 @@ webpackJsonp([1, 0], [function (e, t, a) {
 				staticStyle: {
 					width: "15rem"
 				}
-			}, [e._v("Title")]), e._v(" "), a("th", {
+			}, [e._v("标题")]), e._v(" "), a("th", {
 				staticStyle: {
 					width: "10rem"
 				}
-			}, [e._v("Level reached")]), e._v(" "), a("th", {
+			}, [e._v("达到等级")]), e._v(" "), a("th", {
 				staticStyle: {
 					width: "10rem"
 				}
-			}, [e._v("Highest Level This Loop")]), e._v(" "), a("th", {
+			}, [e._v("本轮循环最高等级")]), e._v(" "), a("th", {
 				staticStyle: {
 					width: "10rem"
 				}
-			}, [e._v("Speedup-Factor")])])
+			}, [e._v("加速因子")])])
 		}, function () {
 			var e = this,
 				t = e.$createElement,
@@ -7551,19 +7551,19 @@ webpackJsonp([1, 0], [function (e, t, a) {
 				staticStyle: {
 					width: "15rem"
 				}
-			}, [e._v("Area")]), e._v(" "), a("th", {
+			}, [e._v("领域")]), e._v(" "), a("th", {
 				staticStyle: {
 					width: "10rem"
 				}
-			}, [e._v("Level reached")]), e._v(" "), a("th", {
+			}, [e._v("达到等级")]), e._v(" "), a("th", {
 				staticStyle: {
 					width: "10rem"
 				}
-			}, [e._v("Highest Level This Loop")]), e._v(" "), a("th", {
+			}, [e._v("本轮循环最高等级")]), e._v(" "), a("th", {
 				staticStyle: {
 					width: "10rem"
 				}
-			}, [e._v("Speedup-Factor")])])
+			}, [e._v("加速因子")])])
 		}]
 	}
 }, function (e, t) {
