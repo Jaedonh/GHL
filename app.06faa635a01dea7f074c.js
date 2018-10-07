@@ -8317,7 +8317,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
 				attrs: {
 					for: "checkbox-idleMode"
 				}
-			}, [e._v("Fast-Forward progress if the game was inactive (e.g. in a background tab)")]), e._v(" "), a("br"), e._v(" "), a("button", {
+			}, [e._v("如果游戏处于非活动状态(例如，在后台标签中)，则快速推进进程")]), e._v(" "), a("br"), e._v(" "), a("button", {
 				staticClass: "btn",
 				attrs: {
 					role: "button"
@@ -8327,7 +8327,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
 						e.toggleNightMode()
 					}
 				}
-			}, [e._v("Toggle Night Mode")]), e._v(" "), a("br"), e._v(" "), a("h5", [e._v("导入/导出游戏存档")]), e._v(" "), a("br"), e._v(" "), a("button", {
+			}, [e._v("切换夜间模式")]), e._v(" "), a("br"), e._v(" "), a("h5", [e._v("导入/导出游戏存档")]), e._v(" "), a("br"), e._v(" "), a("button", {
 				staticClass: "btn",
 				attrs: {
 					role: "button"
@@ -8354,7 +8354,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
 					rows: "10",
 					cols: "50"
 				}
-			}), e._v(" "), a("br"), e._v(" "), a("br"), e._v(" "), a("br"), e._v(" "), a("br"), e._v(" "), a("h1", [e._v("警告!下面的按钮会删除你所有的进度!!")]), e._v(" "), a("button", {
+			}), e._v(" "), a("br"), e._v(" "), a("br"), e._v(" "), a("br"), e._v(" "), a("br"), e._v(" "), a("h1", [e._v("警告！下面的按钮将会删除您的进度！")]), e._v(" "), a("button", {
 				staticClass: "btn",
 				attrs: {
 					role: "button"
@@ -8364,7 +8364,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
 						e.hardReset()
 					}
 				}
-			}, [e._v("擦除游戏进度")])])
+			}, [e._v("重置游戏")])])
 		},
 		staticRenderFns: []
 	}
