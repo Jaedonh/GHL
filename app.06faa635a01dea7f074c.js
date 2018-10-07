@@ -3807,7 +3807,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
 		r = a(28),
 		o = t.studySkills = new n.Area("area_study_skills", "学习技巧", []),
 		s = new i.LevelAddMultModifier("study_skills_research_level_mod", "研究: 学习技巧", 2, o.xp, .01);
-	r.baseResearchXpPerHourStat.addModifier(s), o.effect = "+1% Research Speed", o.importance = 2.5
+	r.baseResearchXpPerHourStat.addModifier(s), o.effect = "+1% 研究速度", o.importance = 2.5
 }, function (e, t, a) {
 	"use strict";
 
@@ -5095,8 +5095,8 @@ webpackJsonp([1, 0], [function (e, t, a) {
 		c = t.alg3 = new i.Book("alg3", "Concrete Mathematics", "Finetuning your Skills", 2e3, "0201558025");
 	(0, n.createCompletedOrReadingListLock)(u, l), (0, n.createCompletedOrReadingListLock)(l, c);
 	var d = t.alg = new r.Area("area_alg", "Algorithms", [u, l, c]),
-		f = new o.LevelAddMultModifier("alg_research_level_mod", "Research: Algorithms", 2, d.xp, .01);
-	s.programming.xp.xpPerHourStat.addModifier(f), d.effect = "+1% Programming Research Speed"
+		f = new o.LevelAddMultModifier("alg_research_level_mod", "研究：算法", 2, d.xp, .01);
+	s.programming.xp.xpPerHourStat.addModifier(f), d.effect = "+1% 编程研究速度"
 }, function (e, t, a) {
 	"use strict";
 	Object.defineProperty(t, "__esModule", {
@@ -5128,7 +5128,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
 	(0, n.createCompletedOrReadingListLock)(l, c), (0, n.createCompletedOrReadingListLock)(c, d), (0, n.createCompletedOrReadingListLock)(d, f), (0, n.createCompletedOrReadingListLock)(f, v);
 	var h = t.se = new r.Area("area_se", "Software Engineering", [l, c, d, f, v]),
 		p = new o.LevelAddMultModifier("se_research_level_mod", "Research: Software Engineering", 2, h.xp, .01);
-	s.programming.xp.xpPerHourStat.addModifier(p), h.effect = "+1% Programming Research Speed", (0, n.createLevelLock)(h, u.softwareEngineer, 5)
+	s.programming.xp.xpPerHourStat.addModifier(p), h.effect = "+1% 编程研究速度", (0, n.createLevelLock)(h, u.softwareEngineer, 5)
 }, function (e, t, a) {
 	"use strict";
 	Object.defineProperty(t, "__esModule", {
