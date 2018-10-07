@@ -1521,7 +1521,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
 					}
 				}]), t
 	}(h.BooleanStateEntity));
-	t.anomalyAverted = new m("state_anomalyAverted", "Anomaly Averted", !1, !0), t.cannonVictory = new h.NumberStateEntity("cannon_victory_counter", "Cannon Victories", 0, !1, 0), t.communicationVictory = new h.NumberStateEntity("communication_victory_counter", "Communication Victories", 0, !1, 0)
+	t.anomalyAverted = new m("state_anomalyAverted", "避免异常", !1, !0), t.cannonVictory = new h.NumberStateEntity("cannon_victory_counter", "Cannon Victories", 0, !1, 0), t.communicationVictory = new h.NumberStateEntity("communication_victory_counter", "Communication Victories", 0, !1, 0)
 }, function (e, t, a) {
 	"use strict";
 
@@ -4509,7 +4509,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
 		return l.communicationVictory.getValue()
 	}, 1);
 	l.communicationVictory.subscribe(b);
-	var k = new n.Achievement("achievement_cannon_victory", "Castle Doctrine", "Win by firepower", function () {
+	var k = new n.Achievement("achievement_cannon_victory", "城堡准则", "火力制胜", function () {
 		return l.cannonVictory.getValue()
 	}, 1);
 	l.cannonVictory.subscribe(k);
@@ -4528,7 +4528,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
 	var C = function () {
 		return l.aaCounter.state.value
 	},
-		x = new n.Achievement("achievement_anomalyAverted", "Anomaly Averted", "End the loop. Once.", C, 1);
+		x = new n.Achievement("achievement_anomalyAverted", "避免异常", "结束循环。 一次。", C, 1);
 	l.aaCounter.subscribe(x), x.effect = "Multiplies your base energy by the number of times you averted the anomaly.";
 	t.achievements = [m, c, d, y, g, _, M, f, v, h, p, k, b, L, w, x]
 }, function (e, t, a) {
@@ -8059,7 +8059,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
 						with: "1rem"
 					}
 				}), e._v(" "), a("td", [e._v(e._s(t.currentValue.toFixed(2)) + "/" + e._s(t.goal))])])
-			})), e._v("\n    Your base energy is increased by the number of times you averted the anomaly.\n  ")])])
+			})), e._v("\n    你的基础精力会增加你避免异常的次数。\n  ")])])
 		},
 		staticRenderFns: []
 	}
@@ -8429,7 +8429,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
 				attrs: {
 					role: "alert"
 				}
-			}, [e._v("\n     You just turned 18. Again. Expertise from previous lives makes things easier this time.\n  ")])]) : e._e()
+			}, [e._v("\n     你转生到了18岁。 这次来自前世的专业知识使事情变得更容易。\n  ")])]) : e._e()
 		},
 		staticRenderFns: []
 	}
