@@ -3124,9 +3124,9 @@ webpackJsonp([1, 0], [function (e, t, a) {
 				var d = (0, l.
 					default)(this, (t.__proto__ || (0, r.
 						default)(t)).call(this, e, a, new k(c, o)));
-				d.description = n, d.rent = new p.Stat(d.id + "_rent", d.name + " Rent", i, 2, "$", "/day");
+				d.description = n, d.rent = new p.Stat(d.id + "_rent", d.name + " Rent", i, 2, "$", "/天");
 				var f = new y.StatEffectiveAddModifier(d.id + "_rent_expense_mod", "Rent for " + d.name, 1, d.rent);
-				(0, _.createSelectedLock)(d, f), g.dailyExpensesStat.addModifier(f), d.initialCost = new p.Stat(d.id + "initial_cost", "Initial Cost", o, 0, "$"), d.originalInitialCost = o, d.choresTime = new p.Stat(d.id + "_chores", "Chores", s, 0, "", " minutes/day", !0, !0, 0);
+				(0, _.createSelectedLock)(d, f), g.dailyExpensesStat.addModifier(f), d.initialCost = new p.Stat(d.id + "initial_cost", "初始花费", o, 0, "$"), d.originalInitialCost = o, d.choresTime = new p.Stat(d.id + "_chores", "家务", s, 0, "", " 分钟/天", !0, !0, 0);
 				var h = new y.StatEffectiveAddModifier(d.id + "_chores_mod", "Chores at " + d.name, 1, d.choresTime);
 				return (0, _.createSelectedLock)(d, h), b.chores.duration.addModifier(h), d.quality = new p.Stat(d.id + "_quality", "Home Quality", u, 0), c && (m.currentHomeContainer.home = d, m.currentHomeContainer.update()), d
 			}
@@ -3175,9 +3175,9 @@ webpackJsonp([1, 0], [function (e, t, a) {
 						}
 					}]), t
 		}(h.BasicEntity),
-		L = t.parentsBasement = new w("home_parentsBasement", "Parents Basement", "Still gotta' do your part", 10, 0, 30, 1, !0),
-		C = new w("home_sharedApartment", "Shared Apartment", "WHAT'S THAT THING IN THE SINK?", 25, 500, 60, 2),
-		x = new w("home_studioApartment", "Studio Apartment", "This is the living room. Also the kitchen. And bedroom.", 50, 1e3, 90, 3),
+		L = t.parentsBasement = new w("home_parentsBasement", "父母家", "直到你获得自己的住所", 10, 0, 30, 1, !0),
+		C = new w("home_sharedApartment", "合租公寓", "水槽里的是什么东西？", 25, 500, 60, 2),
+		x = new w("home_studioApartment", "单间公寓", "这既是客厅。也是厨房。还是卧室。", 50, 1e3, 90, 3),
 		P = new w("home_tinyApartment", "Tiny Apartment", "Two rooms!", 70, 2e3, 120, 4),
 		S = new w("home_regularApartment", "Normal Apartment", "Just a normal apartment in an ordinary neighbourhood.", 100, 6e3, 150, 5),
 		A = new w("home_fancyApartment", "Fancy Apartment", "Look at that shower!", 200, 1e4, 180, 6),
@@ -3471,7 +3471,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
 	var v = new n.Boost("boost_organize", "Organize your Stuff", "Double Energy for 3 Months", 90, 1095),
 		h = new o.MultModifier("boost_organize_mod", "Organized your Stuff", 10, 2);
 	(0, s.createSelectedLock)(v, h), (0, s.createLevelLock)(l.getStuffDone, v, 10), i.energyStat.addModifier(h);
-	var p = new n.Boost("boost_spa", "Visit Spa", "Double Energy for 4 Months", 120, 1460),
+	var p = new n.Boost("boost_spa", "泡温泉", "双倍的活力持续 4 个月", 120, 1460),
 		m = new o.MultModifier("boost_spaMod", "Visited Spa", 10, 2);
 	(0, s.createSelectedLock)(p, m), i.energyStat.addModifier(m);
 	var y = new n.Boost("boost_conference", "Go to Conference", "Double Research Output for 6 Months", 180, 1825),
@@ -3540,14 +3540,14 @@ webpackJsonp([1, 0], [function (e, t, a) {
 						}
 					}]), t
 		}(g.BooleanStateEntity),
-		P = t.cleaner = new x("assistant_cleaner", "Cleaner", "Reduces Your Chores by One Hour", 50, function () {
+		P = t.cleaner = new x("assistant_cleaner", "打扫工", "减少你的家务时间一小时", 50, function () {
 			return !0
 		}, function () {
 			return b.freeTime.duration.effective >= 60 + Math.min(0, L.currentHomeContainer.home.choresTime.rawEffective)
 		}),
 		S = new M.AddModifier("cleaner_mod", "Cleaner", 1, -60);
 	(0, _.createTrueStateLock)(P, S);
-	var A = t.servant = new x("assistant_servant", "Full-time Servant", "Reduces Your Chores by Five Hours", 1e3, function () {
+	var A = t.servant = new x("assistant_servant", "全职佣人", "减少你的家务时间五小时", 1e3, function () {
 		return !0
 	}, function () {
 		return b.freeTime.duration.effective >= 300 + Math.min(0, L.currentHomeContainer.home.choresTime.rawEffective)
@@ -3574,14 +3574,14 @@ webpackJsonp([1, 0], [function (e, t, a) {
 			if (N) throw T
 		}
 	}
-	var R = t.researchAssistant = new x("assistant_research", "Research Assistant", "Research Speed +50%", 500, function () {
+	var R = t.researchAssistant = new x("assistant_research", "研究助手", "研究速度 +50%", 500, function () {
 		return !0
 	}, function () {
 		return !0
 	}),
 		z = new M.MultModifier("researchAssistant_mod", "Research Assistant", 10, 1.5);
 	(0, _.createTrueStateLock)(R, z), C.baseResearchXpPerHourStat.addModifier(z);
-	var V = t.secretary = new x("assistant_secretary", "Personal Secretary", "Work Experience +50%", 500, function () {
+	var V = t.secretary = new x("assistant_secretary", "私人秘书", "工作经验 +50%", 500, function () {
 		return !0
 	}, function () {
 		return !0
@@ -3713,8 +3713,8 @@ webpackJsonp([1, 0], [function (e, t, a) {
 	c = new o.MultModifier(v.id + "_workexp_mod", v.name, 1, 1.05), (0, n.createCompletedLock)(v, c), s.baseWorkXpPerHourStat.addModifier(c), v.effect = "5% more work experience/hour";
 	var h = new i.Book("leadership5", "Leadership: Theory and Practice", "Getting Serious", 300, "1483317536");
 	c = new o.MultModifier(h.id + "_workexp_mod", h.name, 1, 1.05), (0, n.createCompletedLock)(h, c), s.baseWorkXpPerHourStat.addModifier(c), h.effect = "5% more work experience/hour", (0, n.createCompletedOrReadingListLock)(l, d), (0, n.createCompletedOrReadingListLock)(d, f), (0, n.createCompletedOrReadingListLock)(f, v), (0, n.createCompletedOrReadingListLock)(v, h);
-	var p = t.leadership = new r.Area("area_leadership", "Leadership", [l, d, f, v, h]);
-	c = new o.LevelAddMultModifier("leadership_research_level_mod", "Research: Leadership", 2, p.xp, .02), s.baseWorkXpPerHourStat.addModifier(c), p.effect = "+2% Work Experience/Hour", p.importance = 1.5, (0, n.createLevelLock)(p, u.teamLead, 10), (0, n.createLevelLock)(p, u.divisionLead, 10), (0, n.createLevelLock)(p, u.cto, 100)
+	var p = t.leadership = new r.Area("area_leadership", "领导才能", [l, d, f, v, h]);
+	c = new o.LevelAddMultModifier("leadership_research_level_mod", "研究: 领导才能", 2, p.xp, .02), s.baseWorkXpPerHourStat.addModifier(c), p.effect = "+2% Work Experience/Hour", p.importance = 1.5, (0, n.createLevelLock)(p, u.teamLead, 10), (0, n.createLevelLock)(p, u.divisionLead, 10), (0, n.createLevelLock)(p, u.cto, 100)
 }, function (e, t, a) {
 	"use strict";
 
@@ -3747,7 +3747,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
 		var _ = new u.LevelAddMultModifier(y[g].id + "_level_mod", "Research: " + y[g].name, 2, y[g].xp, .01);
 		y[g + 1].xp.xpPerHourStat.addModifier(_), y[g].effect = "+1% " + y[g + 1].name + " Research", (0, o.createLevelLock)(y[g], y[g + 1], 50 * g)
 	} (0, o.createLevelLock)(p, m, 500), p.effect = "Level 500 to Destroy Mirror Ship", m.effect = "Level 1100 to Communicate", (0, o.createLevelLock)(s.lambdaComplexTrainee, l, 1);
-	t.physics = new n.Field("physics", "Physics", y)
+	t.physics = new n.Field("physics", "物理学", y)
 }, function (e, t, a) {
 	"use strict";
 	Object.defineProperty(t, "__esModule", {
@@ -3763,7 +3763,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
 		c = t.qm3 = new i.Book("qm3", "Introduction to Quantum Mechanics", "Head hurts.", 500, "0131118927"),
 		d = t.qm4 = new i.Book("qm4", "Modern Quantum Mechanics", "Okay I think I get it. Maybe.", 600, "0805382917");
 	(0, n.createCompletedOrReadingListLock)(s, u), (0, n.createCompletedOrReadingListLock)(u, l), (0, n.createCompletedOrReadingListLock)(l, c), (0, n.createCompletedOrReadingListLock)(c, d);
-	var f = t.qm = new r.Area("area_qm", "Quantum Mechanics", [s, u, l, c, d]);
+	var f = t.qm = new r.Area("area_qm", "量子力学", [s, u, l, c, d]);
 	f.effect = "Exciting Career Opportunities", (0, n.createLevelLock)(f, o.darkPlateau.jobs[0], 50), (0, n.createLevelLock)(f, o.darkPlateau.jobs[6], 500)
 }, function (e, t, a) {
 	"use strict";
@@ -3784,8 +3784,8 @@ webpackJsonp([1, 0], [function (e, t, a) {
 	d = new o.MultModifier("gsd2_job_experience_mod", "The One Thing", 1, 1.1), (0, n.createCompletedLock)(f, d), u.baseWorkXpPerHourStat.addModifier(d), f.effect = "10% more work experience/h";
 	var v = new i.Book("gsd3", "Getting Things Done", "Organize Your Life", 120, "0143126563");
 	d = new o.MultModifier("gsd3_job_experience_mod", "Getting Things Done", 1, 1.1), (0, n.createCompletedLock)(v, d), l.energyStat.addModifier(d), v.effect = "10% more energy", (0, n.createCompletedOrReadingListLock)(c, f), (0, n.createCompletedOrReadingListLock)(f, v);
-	var h = t.getStuffDone = new r.Area("area_getting_stuff_done", "Getting Stuff Done", [c, f, v]);
-	d = new o.LevelModifier("gsd_research_level_mod", "Research: Getting Things Done", 2, h.xp, .99), s.slacking.duration.addModifier(d), h.effect = "-1% Slacking (compounding)"
+	var h = t.getStuffDone = new r.Area("area_getting_stuff_done", "把事情做完", [c, f, v]);
+	d = new o.LevelModifier("gsd_research_level_mod", "研究: 把事情做完", 2, h.xp, .99), s.slacking.duration.addModifier(d), h.effect = "-1% Slacking (compounding)"
 }, function (e, t, a) {
 	"use strict";
 	Object.defineProperty(t, "__esModule", {
@@ -3794,8 +3794,8 @@ webpackJsonp([1, 0], [function (e, t, a) {
 	var n = a(21),
 		i = a(11),
 		r = a(33),
-		o = t.nutrition = new n.Area("area_nutrition", "Nutrition", []),
-		s = new i.LevelAddMultModifier("nutrition_research_level_mod", "Research: Nutrition", 2, o.xp, .01);
+		o = t.nutrition = new n.Area("area_nutrition", "营养学", []),
+		s = new i.LevelAddMultModifier("nutrition_research_level_mod", "研究: 营养学", 2, o.xp, .01);
 	r.energyStat.addModifier(s), o.effect = "+1% Energy", o.importance = 3
 }, function (e, t, a) {
 	"use strict";
@@ -3805,8 +3805,8 @@ webpackJsonp([1, 0], [function (e, t, a) {
 	var n = a(21),
 		i = a(11),
 		r = a(28),
-		o = t.studySkills = new n.Area("area_study_skills", "Study Skills", []),
-		s = new i.LevelAddMultModifier("study_skills_research_level_mod", "Research: Study Skills", 2, o.xp, .01);
+		o = t.studySkills = new n.Area("area_study_skills", "学习技巧", []),
+		s = new i.LevelAddMultModifier("study_skills_research_level_mod", "研究: 学习技巧", 2, o.xp, .01);
 	r.baseResearchXpPerHourStat.addModifier(s), o.effect = "+1% Research Speed", o.importance = 2.5
 }, function (e, t, a) {
 	"use strict";
@@ -4908,17 +4908,17 @@ webpackJsonp([1, 0], [function (e, t, a) {
 		c = (0, n.createNode)("event_dp_success2", "Success! They reply with a job offer.", null, function () {
 			return s.unlockedDarkPlateau.setValue(o.currentLife.getValue())
 		}),
-		d = (0, n.createNode)("event_dp_failure", "...but you are just not good enough at quantum physics (Level 50 required at age 28).", null),
+		d = (0, n.createNode)("event_dp_failure", "……但你在量子物理学方面还不够好（在 28 岁需要达到 50 级）。", null),
 		f = (0, n.createNode)("event_dp_success", "Looks right, send it.", c),
 		v = function () {
 			return u.qm.xp.state.level >= 50 ? 0 : 1
 		},
-		h = (0, n.createAutoChoiceNode)("event_dp4", "You try...", v, [f, d]),
-		p = (0, n.createNode)("event_dp3", "Looks like you are supposed to solve them.", h),
-		m = (0, n.createNode)("event_dp2", "It contains some complicated quantum physics equations.", p),
-		y = (0, n.createNode)("event_dp1", "An email from a company called Dark Plateau.", m),
+		h = (0, n.createAutoChoiceNode)("event_dp4", "你尝试着……", v, [f, d]),
+		p = (0, n.createNode)("event_dp3", "看来你应该解决这些问题。", h),
+		m = (0, n.createNode)("event_dp2", "它包含了一些复杂的量子物理方程。", p),
+		y = (0, n.createNode)("event_dp1", "一封来自一家名为“黑暗高原”公司的电子邮件。", m),
 		g = [y, m, p, h, f, d, c],
-		_ = t.dp = (0, n.createEvent)("event_dp", "Dark Plateau?", g);
+		_ = t.dp = (0, n.createEvent)("event_dp", "黑暗高原？", g);
 	(0, i.createMinimumValueLock)(r.currentYear, _, 10), (0, i.createMinimumValueLock)(r.currentYear, h, 10), (0, i.createCustomLock)([s.unlockedDarkPlateau], _, function () {
 		return s.unlockedDarkPlateau.getValue() === -1 || s.unlockedDarkPlateau.getValue() === o.currentLife.getValue()
 	}), (0, i.createCustomLock)([s.unlockedDarkPlateau], l.darkPlateau, function () {
@@ -4945,10 +4945,10 @@ webpackJsonp([1, 0], [function (e, t, a) {
 		i = a(9),
 		r = a(18),
 		o = a(40),
-		s = (0, n.createNode)("event_lostwallet_inheritance2", "You inherited $50,000 from Mrs Pennywise!", null, function () {
+		s = (0, n.createNode)("event_lostwallet_inheritance2", "你从潘尼怀斯太太那里继承了 5 万美元！", null, function () {
 			return o.money.add(5e4)
 		}),
-		u = (0, n.createNode)("event_lostwallet_inheritance1", "You find an official looking letter in your mailbox.", s),
+		u = (0, n.createNode)("event_lostwallet_inheritance1", "你在邮箱里发现一封看上去很正式的信。", s),
 		l = (0, n.createNode)("event_lostwallet_kept_it", "你发现了她孙子的照片，和 $10。", null),
 		c = (0, n.createNode)("event_lostwallet_gave_back", "她感谢了你并递给你一些糖果。", u),
 		d = (0, n.createPath)("event_path_keeplostWallet", "留着", l),
@@ -5068,7 +5068,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
 	var n = a(61),
 		i = a(108),
 		r = a(167);
-	t.business = new n.Field("business", "Business", [i.leadership, r.investment])
+	t.business = new n.Field("business", "事务", [i.leadership, r.investment])
 }, function (e, t, a) {
 	"use strict";
 	Object.defineProperty(t, "__esModule", {
@@ -5077,8 +5077,8 @@ webpackJsonp([1, 0], [function (e, t, a) {
 	var n = a(21),
 		i = a(11),
 		r = a(52),
-		o = t.investment = new n.Area("area_investment", "Investing", []),
-		s = new i.LevelAddModifier("investment_research_level_mod", "Research: Investing", 2, o.xp, .001);
+		o = t.investment = new n.Area("area_investment", "投资", []),
+		s = new i.LevelAddModifier("investment_research_level_mod", "研究: 投资", 2, o.xp, .001);
 	r.investmentReturnStat.addModifier(s), o.effect = "+0.1% Returns/Year"
 }, function (e, t, a) {
 	"use strict";
@@ -5107,7 +5107,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
 		r = a(170),
 		o = a(168),
 		s = a(9);
-	t.compsci = new n.Field("compsci", "Computer Science", [i.programming, o.alg, r.se]);
+	t.compsci = new n.Field("compsci", "计算机科学", [i.programming, o.alg, r.se]);
 	(0, s.createLevelLock)(i.programming, o.alg, 10), (0, s.createLevelLock)(i.programming, r.se, 20)
 }, function (e, t, a) {
 	"use strict";
@@ -5138,7 +5138,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
 		i = a(114),
 		r = a(113),
 		o = a(61);
-	t.selfImprovement = new o.Field("selfimprovement", "Self Improvement", [i.studySkills, n.getStuffDone, r.nutrition])
+	t.selfImprovement = new o.Field("selfimprovement", "自我提升", [i.studySkills, n.getStuffDone, r.nutrition])
 }, function (e, t, a) {
 	"use strict";
 
@@ -5411,7 +5411,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
 			var M = new h.Stat("totalWorkingHours", "Working, studying, researching", 0, 2),
 				b = new s.StatEffectiveAddModifier("workHoursMod", "Working", 1, u.work.duration),
 				k = new s.StatEffectiveAddModifier("researchHoursMod", "Researching", 1, u.research.duration),
-				w = new s.StatEffectiveAddModifier("choresHoursMod", "Chores", 1, u.chores.duration);
+				w = new s.StatEffectiveAddModifier("choresHoursMod", "家务", 1, u.chores.duration);
 			M.addModifier(b), M.addModifier(k), M.addModifier(w);
 			var L = new s.StatEffectiveAddModifier("happinessFromWorkLifeBalanceMod", "Work-Life Balance (Max: 0.6)", 1, M, function (e) {
 				return 216 / Math.max(e, 360)
@@ -7081,7 +7081,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
 					staticStyle: {
 						"padding-right": "10px"
 					}
-				}, [e._v("\n        " + e._s(t.description) + "\n      ")]), e._v(" "), a("td", [e._v("\n        $" + e._s(t.cost) + "/day\n      ")])])
+				}, [e._v("\n        " + e._s(t.description) + "\n      ")]), e._v(" "), a("td", [e._v("\n        $" + e._s(t.cost) + "/天\n      ")])])
 			}))])
 		},
 		staticRenderFns: [function () {
@@ -7090,7 +7090,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
 				a = e._self._c || t;
 			return a("div", {
 				staticClass: "row"
-			}, [a("h3", [e._v(" Assistants")])])
+			}, [a("h3", [e._v(" 助理")])])
 		}]
 	}
 }, function (e, t) {
@@ -7180,15 +7180,15 @@ webpackJsonp([1, 0], [function (e, t, a) {
 				staticStyle: {
 					width: "4rem"
 				}
-			}, [e._v("Level")]), e._v(" "), a("th", {
+			}, [e._v("等级")]), e._v(" "), a("th", {
 				staticStyle: {
 					width: "15rem"
 				}
-			}, [e._v("Effect")]), e._v(" "), a("th", {
+			}, [e._v("效果")]), e._v(" "), a("th", {
 				staticStyle: {
 					width: "5rem"
 				}
-			}, [e._v("XP needed")]), e._v(" "), a("th", {
+			}, [e._v("升级所需经验")]), e._v(" "), a("th", {
 				staticStyle: {
 					width: "5rem"
 				}
@@ -7495,7 +7495,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
 				a = e._self._c || t;
 			return a("div", {
 				staticClass: "row"
-			}, [a("b", [e._v("A nicer home improves your happiness.")])])
+			}, [a("b", [e._v("一个更好的家能提升你的幸福度。")])])
 		}]
 	}
 }, function (e, t) {
@@ -8214,7 +8214,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
 					attrs: {
 						colspan: "4"
 					}
-				}, [e._v("\n      Requires: " + e._s(t.locks.lockString()) + "\n      ")])])
+				}, [e._v("\n      要求: " + e._s(t.locks.lockString()) + "\n      ")])])
 			})], 2)])
 		},
 		staticRenderFns: [function () {
@@ -8230,15 +8230,15 @@ webpackJsonp([1, 0], [function (e, t, a) {
 					width: "20rem",
 					"padding-left": "20px"
 				}
-			}, [e._v("Effect")]), e._v(" "), a("th", {
+			}, [e._v("效果")]), e._v(" "), a("th", {
 				staticStyle: {
 					width: "6rem"
 				}
-			}, [e._v("Days Left")]), e._v(" "), a("th", {
+			}, [e._v("剩余天数")]), e._v(" "), a("th", {
 				staticStyle: {
 					width: "3rem"
 				}
-			}, [e._v("Cooldown")])])
+			}, [e._v("冷却时间")])])
 		}]
 	}
 }, function (e, t) {
@@ -8387,7 +8387,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
 				attrs: {
 					role: "alert"
 				}
-			}, [a("strong", [e._v("Warning!")]), e._v(" Experiencing major time dilation. Check your events.\n  ")])
+			}, [a("strong", [e._v("警告！")]), e._v(" 已经经历了很长的时间。检查一下你的事件。\n  ")])
 		}]
 	}
 }, function (e, t) {
