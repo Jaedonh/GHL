@@ -354,7 +354,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
 				key: "update",
 				value: function () {
 					var e = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-					if (this._entityUpdated += 1, this.logUnlock ? (this.locks.update(), this.wasLocked && this.unlocked() && f.messageBox.addMessage(this.name + " unlocked!")) : this.locks.update(), this.wasLocked = !this.unlocked(), e) {
+					if (this._entityUpdated += 1, this.logUnlock ? (this.locks.update(), this.wasLocked && this.unlocked() && f.messageBox.addMessage("解锁" + this.name + "！")) : this.locks.update(), this.wasLocked = !this.unlocked(), e) {
 						var t = !0,
 							a = !1,
 							n = void 0;
@@ -1309,7 +1309,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
 		p = t.aboutPane = new o.Pane("about-pane", "关于", "about-display", s, !0),
 		m = t.privacyPane = new o.Pane("privacy-pane", "隐私", "privacy-display", s, !0),
 		y = (t.amazonPane = new o.Pane("amazon-affiliate", "Amazon Affiliate Program", "amazon-display", s, !0), new o.PaneGroup),
-		g = (t.achievementPane = new o.Pane("achievement-pane", "Achievements", "achievements-display", y), t.logPane = new o.Pane("log-pane", "Log", "log-display", y), t.lifeSummaryPane = new o.Pane("life-summary-pane", "History", "life-summary", y), t.journalPane = new o.Pane("journal-pane", "备忘录", "journal-display", s, !1, y.panes));
+		g = (t.achievementPane = new o.Pane("achievement-pane", "成就", "achievements-display", y), t.logPane = new o.Pane("log-pane", "记录", "log-display", y), t.lifeSummaryPane = new o.Pane("life-summary-pane", "历史", "life-summary", y), t.journalPane = new o.Pane("journal-pane", "备忘录", "journal-display", s, !1, y.panes));
 	t.panes = [d, u, l, f, v, g, h, p, m], t.selectPane = function (e) {
 		if (e.paneGroup.allowMultiple) e.toggle();
 		else {
@@ -2025,7 +2025,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
 					}, {
 						key: "setCurrentJob",
 						value: function (e) {
-							e !== this.job && (this.job && this.job.deactivate(), this.job = e, this.job.activate(), M.setCurrentIncome(e.income), g.log.info("You got a new job: " + this.job.name, this.id, g.log.JOBSELECTED), (0, v.
+							e !== this.job && (this.job && this.job.deactivate(), this.job = e, this.job.activate(), M.setCurrentIncome(e.income), g.log.info("你获得了一份新工作: " + this.job.name, this.id, g.log.JOBSELECTED), (0, v.
 								default)(t.prototype.__proto__ || (0, r.
 									default)(t.prototype), "update", this).call(this))
 						}
@@ -5378,7 +5378,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
 				var e = Math.floor(d.currentYear.getValue() / 5),
 					t = c.currentHomeContainer.home.quality.effective,
 					a = t - e;
-				return a >= 1 ? "Nice home." : a <= -1 ? "我想要一个更好的家。" : "Content about my home."
+				return a >= 1 ? "不错的家。" : a <= -1 ? "我想要一个更好的家。" : "关于我家的内容。"
 			}, d.currentYear.subscribe(a);
 			var n = .5,
 				i = function (e) {
@@ -5387,7 +5387,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
 				},
 				r = new s.StatEffectiveAddModifier("happinessFromSleepHoursMod", "Sleep (Max 0.5)", 1, u.sleep.duration, i);
 			v.happinessStat.addModifier(r), r.explain = function () {
-				return u.sleep.duration.effective >= 540 ? "显然有了足够的睡眠" : u.sleep.duration.effective <= 300 ? "Must...sleep." : "足够的睡眠。"
+				return u.sleep.duration.effective >= 540 ? "显然有了足够的睡眠" : u.sleep.duration.effective <= 300 ? "必须……睡觉了。" : "足够的睡眠。"
 			};
 			var f = new s.MultModifier("sleepDeprivation", "Sleep Deprivation", 10, 0);
 			v.happinessStat.addModifier(f);
@@ -5406,7 +5406,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
 			var _ = new s.StatEffectiveAddModifier("happinessFromExpenseRatioMod", "Happiness from Expense Ratio (Max: 0.3)", 1, m);
 			v.happinessStat.addModifier(_), _.explain = function () {
 				var e = o.expenseRatioStat.effective;
-				return o.dailyExpensesStat.effective > 2e3 ? "Happy about my spending." : e < .7 ? "买得起更好的东西……" : e > 1.2 ? "Spending way too much." : e <= 1 ? "Happy about my spending." : "Spending a little too much maybe."
+				return o.dailyExpensesStat.effective > 2e3 ? "对我的花销很满意。" : e < .7 ? "买得起更好的东西……" : e > 1.2 ? "花钱花的太多了。" : e <= 1 ? "对我的花销很满意。" : "Spending a little too much maybe."
 			};
 			var M = new h.Stat("totalWorkingHours", "Working, studying, researching", 0, 2),
 				b = new s.StatEffectiveAddModifier("workHoursMod", "Working", 1, u.work.duration),
@@ -5418,7 +5418,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
 			});
 			v.happinessStat.addModifier(L), L.explain = function () {
 				var e = L.factor;
-				return e < .2 ? "I'm overworked." : e < .4 ? "Feeling slightly stressed out." : e >= .4 ? "很好地平衡工作与生活。" : ""
+				return e < .2 ? "我感到劳累过度。" : e < .4 ? "感到有点焦虑不安。" : e >= .4 ? "很好地平衡工作与生活。" : ""
 			}
 		};
 	t.setupGame = function () {
@@ -7161,7 +7161,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
 			var e = this,
 				t = e.$createElement,
 				a = e._self._c || t;
-			return a("div", [a("h3", [e._v("About")]), e._v("\n        Developed by M. Gronbach meismo@gmail.com.\n")])
+			return a("div", [a("h3", [e._v("关于")]), e._v("\n        由 M. Gronbach 开发 meismo@gmail.com.\n")])
 		}]
 	}
 }, function (e, t) {
@@ -7463,7 +7463,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
 			return a("div", [a("div", {
 				staticClass: "row"
 			}, [a("table", e._l(e.log.state.entries.slice(0, 100), function (t) {
-				return a("tr", [a("td", [e._v(e._s(t.timestampAge[0]) + " years " + e._s(t.timestampAge[1]) + " days:")]), a("td", [e._v(e._s(t.message))])])
+				return a("tr", [a("td", [e._v(e._s(t.timestampAge[0]) + " 岁 " + e._s(t.timestampAge[1]) + " 天:")]), a("td", [e._v(e._s(t.message))])])
 			}))])])
 		},
 		staticRenderFns: []
@@ -7977,11 +7977,11 @@ webpackJsonp([1, 0], [function (e, t, a) {
 			var e = this,
 				t = e.$createElement,
 				a = e._self._c || t;
-			return a("div", [a("h3", [e._v("Privacy Policy")]), e._v("\n        We do not collect or store any of your personal information."), a("br"), e._v("\n        However, we use PlayFab and Google Analytics for internal usage analysis."), a("br"), e._v("\n        We use PlayFab analytics to guide game improvements."), a("br"), e._v("\n        Google Analytics uses cookies to store non-personally identifiable information."), a("br"), e._v("\n        For more information, see "), a("a", {
+			return a("div", [a("h3", [e._v("隐私政策")]), e._v("\n        我们不会收集或存储您的任何个人信息。"), a("br"), e._v("\n        但是，我们使用 Playfab 和 Google Analytics 进行内部使用分析。"), a("br"), e._v("\n        我们使用 Playfab 分析来引导游戏改进。"), a("br"), e._v("\n        Google Analytics 使用 cookie 来存储非个人身份信息。"), a("br"), e._v("\n        有关的更多信息，请参见 "), a("a", {
 				attrs: {
 					href: "https://support.google.com/analytics/answer/6004245?hl=en"
 				}
-			}, [e._v("https://support.google.com/analytics/answer/6004245?hl=en")]), e._v("."), a("br"), e._v("\n        If you do not agree to the use of Google Analytics, please download a browser plugin to block Google Analytics."), a("br")])
+			}, [e._v("https://support.google.com/analytics/answer/6004245?hl=en")]), e._v("。"), a("br"), e._v("\n        如果您不同意使用 Google Analytics，请下载一个浏览器插件来阻止 Google Analytics。"), a("br")])
 		}]
 	}
 }, function (e, t) {
