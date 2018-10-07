@@ -2488,7 +2488,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
 					}, {
 						key: "setCurrentResearch",
 						value: function (e) {
-							e !== this.area && (this.area && this.area.deactivate(), this.area = e, y.log.info("Researching " + this.area.name, this.name, y.log.RESEARCH_SELECTED), this.area.activate(), (0, v.
+							e !== this.area && (this.area && this.area.deactivate(), this.area = e, y.log.info("研究 " + this.area.name, this.name, y.log.RESEARCH_SELECTED), this.area.activate(), (0, v.
 								default)(t.prototype.__proto__ || (0, r.
 									default)(t.prototype), "update", this).call(this))
 						}
