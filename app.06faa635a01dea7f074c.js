@@ -4455,21 +4455,21 @@ webpackJsonp([1, 0], [function (e, t, a) {
 		s = a(62),
 		u = a(40),
 		l = a(39),
-		c = new n.Achievement("achievement_edge_of_retirement", "Edge of Retirement", "Start Over Once", function () {
+		c = new n.Achievement("achievement_edge_of_retirement", "退休的边缘", "重新开始一次", function () {
 			return i.currentLife.getValue() - 1
 		}, 1);
 	i.currentLife.subscribe(c);
-	var d = new n.Achievement("achievement_samsara", "Samsara", "Start Over Ten Times", function () {
+	var d = new n.Achievement("achievement_samsara", "轮回", "重新开始10次", function () {
 		return i.currentLife.getValue() - 1
 	}, 10);
 	i.currentLife.subscribe(d);
-	var f = new n.Achievement("achievement_flippin_faster", "Flippin' Faster", "Level 10 Burger Flipper in less than 100 days", function () {
+	var f = new n.Achievement("achievement_flippin_faster", "快速翻转", "在不到100天的时间内完成10级汉堡服务生", function () {
 		return r.burgerFlipper.xp.getMinDaysToLevel(10)
 	}, 100, function (e, t) {
 		return e <= t
 	});
 	r.burgerFlipper.xp.subscribe(f);
-	var v = new n.Achievement("achievement_flippin_fantastic", "Flippin' Fantastic", "Level 100 Burger Flipping", function () {
+	var v = new n.Achievement("achievement_flippin_fantastic", "神奇的翻转", "完成100级汉堡服务生", function () {
 		return r.burgerFlipper.xp.highestLevelEverIncludingThisLife()
 	}, 100);
 	r.burgerFlipper.xp.subscribe(v);
@@ -4477,31 +4477,31 @@ webpackJsonp([1, 0], [function (e, t, a) {
 		return r.burgerFlipper.xp.highestLevelEverIncludingThisLife()
 	}, 1e3);
 	r.burgerFlipper.xp.subscribe(h);
-	var p = new n.Achievement("achievement_burgerKing", "Burger King", "Become Bun Masters CEO", function () {
+	var p = new n.Achievement("achievement_burgerKing", "汉堡王", "成为汉堡大师CEO", function () {
 		return r.bunMastersCeo.xp.highestLevelEverIncludingThisLife()
 	}, 1);
 	r.bunMastersCeo.xp.subscribe(p);
-	var m = new n.Achievement("achievement_mayering", "Marissa?", "Level 10 Yugle CEO before age 40", function () {
+	var m = new n.Achievement("achievement_mayering", "玛丽莎?", "40岁前达到10级优格总裁", function () {
 		return o.yugleCeo.xp.getMinDaysToLevel(10)
 	}, 8030, function (e, t) {
 		return e <= t
 	});
 	o.yugleCeo.xp.subscribe(m);
-	var y = new n.Achievement("achievement_happy", "Happy", "Be at least 1.8 happy", function () {
+	var y = new n.Achievement("achievement_happy", "快乐", "幸福度至少在1.8", function () {
 		return s.happinessStat.state.highestEffectiveEver
 	}, 1.8);
 	s.happinessStat.subscribe(y);
-	var g = new n.Achievement("achievement_miserable", "Miserable", "Be less than 0.1 happy", function () {
+	var g = new n.Achievement("achievement_miserable", "悲惨", "幸福度小于0.1", function () {
 		return s.happinessStat.state.lowestEffectiveEver
 	}, .1, function (e, t) {
 		return e <= t
 	});
 	s.happinessStat.subscribe(g);
-	var _ = new n.Achievement("achievement_millionaire", "Millionaire", "Have a million dollars", function () {
+	var _ = new n.Achievement("achievement_millionaire", "Millionaire", "赚取100万$", function () {
 		return u.money.state.maximum
 	}, 1e6);
 	u.money.subscribe(_);
-	var M = new n.Achievement("achievement_billionaire", "Billionaire", "Have a billion dollars", function () {
+	var M = new n.Achievement("achievement_billionaire", "Billionaire", "赚取10亿$", function () {
 		return u.money.state.maximum
 	}, 1e9);
 	u.money.subscribe(M);
@@ -4978,13 +4978,13 @@ webpackJsonp([1, 0], [function (e, t, a) {
 			(0, s.selectPane)(s.journalPane), (0, s.selectPane)(s.lifeSummaryPane), c.anomalyAverted.getValue() ? i.prestiger.grandPrestige() : i.prestiger.prestige(), l.pauseOnPrestige.getValue() && u.paused.setValue(!0)
 		},
 		f = (0, n.createNode)("event_groundhog_prestige", "我们走吧！", null, d),
-		v = (0, n.createPath)("replyGroundhog", '回复“土拨鼠”', f),
+		v = (0, n.createPath)("replyGroundhog", '重玩“土拨鼠”', f),
 		h = (0, n.createNode)("event_brokengroundhog_prestige", "我们走吧！", null, d),
-		p = (0, n.createPath)("brokenreplyGroundhog", '回复“土拨鼠”', h),
-		m = (0, n.createUserChoiceNode)("brokengroundhoggingRoot", "手机上留言：'恭喜！ 现在在此生里面进行。 回复\“土拨鼠\”与更多的能量重新开始“。", [p]),
+		p = (0, n.createPath)("brokenreplyGroundhog", '重玩“土拨鼠”', h),
+		m = (0, n.createUserChoiceNode)("brokengroundhoggingRoot", "手机上留言：'恭喜！ 现在在此生里面进行。 重玩\“土拨鼠\”，与更多的能量重新开始“。", [p]),
 		y = (0, n.createNode)("event_brokengroundhog2", "所有的日子都是正规的长度！", m),
 		g = (0, n.createNode)("event_brokengroundhog1", "一切安好！", y),
-		_ = (0, n.createUserChoiceNode)("groundhoggingRoot", "手机上的消息：'我们失败了。 回复“土拨鼠”再试一次。'", [v]),
+		_ = (0, n.createUserChoiceNode)("groundhoggingRoot", "手机上的消息：'我们失败了。 重玩“土拨鼠”，再试一次。'", [v]),
 		M = (0, n.createNode)("event_groundhog2", "每天似乎比前一天持续更长时间。", _),
 		b = (0, n.createNode)("event_groundhog1", "感觉什么东西出错了...", M),
 		k = function () {
