@@ -1300,9 +1300,9 @@ webpackJsonp([1, 0], [function (e, t, a) {
 		o = a(116),
 		s = t.topLevelPanes = new o.PaneGroup,
 		u = t.jobPane = new o.Pane("job-pane", "工作", "job-display", s, !1),
-		l = (t.readingPane = new o.Pane("reading-pane", "Reading", "study-fields", s), t.researchPane = new o.Pane("research-pane", "研究", "research-display", s)),
+		l = (t.readingPane = new o.Pane("reading-pane", "阅读", "study-fields", s), t.researchPane = new o.Pane("research-pane", "研究", "research-display", s)),
 		c = new o.PaneGroup,
-		d = (t.spendingPane = new o.Pane("spending-pane", "Spending", "spending-display", c), t.housingPane = new o.Pane("housing-pane", "Home", "housing-display", c), t.boostsPane = new o.Pane("boosts-pane", "Boosts", "boosts-display", c), t.happinessPane = new o.Pane("happiness-pane", "心情", "happiness-explain", s)),
+		d = (t.spendingPane = new o.Pane("spending-pane", "开销", "spending-display", c), t.housingPane = new o.Pane("housing-pane", "家", "housing-display", c), t.boostsPane = new o.Pane("boosts-pane", "加成", "boosts-display", c), t.happinessPane = new o.Pane("happiness-pane", "心情", "happiness-explain", s)),
 		f = t.lifestylePane = new o.Pane("lifestyle-pane", "生活方式", "lifestyle-display", s, !1, c.panes),
 		v = t.eventPane = new o.Pane("event-pane", "事件", "events-display", s),
 		h = t.settingsPane = new o.Pane("settings-pane", "设置", "settings-display", s, !0),
@@ -1405,7 +1405,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
 		var a = new p(e, t),
 			n = new h.StatEffectiveAddModifier(a.id + "_base", "Base Work Experience", 1, m);
 		return a.addModifier(n), a
-	}, t.baseResearchXpPerHourStat = new f.Stat("baseResearchXpPerHourStat", "Base Research XP", 1, 2, "", "/h"));
+	}, t.baseResearchXpPerHourStat = new f.Stat("baseResearchXpPerHourStat", "基础研究经验", 1, 2, "", "/小时"));
 	y.addModifier(v.standardEnergyModifier);
 	t.createResearchXpPerHourStat = function (e, t) {
 		var a = new p(e, t),
@@ -4949,15 +4949,15 @@ webpackJsonp([1, 0], [function (e, t, a) {
 			return o.money.add(5e4)
 		}),
 		u = (0, n.createNode)("event_lostwallet_inheritance1", "You find an official looking letter in your mailbox.", s),
-		l = (0, n.createNode)("event_lostwallet_kept_it", "You find pictures of her grandchildren, and $10.", null),
-		c = (0, n.createNode)("event_lostwallet_gave_back", "She thanks you and hands you some candy.", u),
-		d = (0, n.createPath)("event_path_keeplostWallet", "Keep it", l),
-		f = (0, n.createPath)("event_path_giveBacklostwallet", "Give it back, of course", c),
-		v = (0, n.createUserChoiceNode)("event_lostwallet_choice", "What do you do?", [f, d]),
-		h = (0, n.createNode)("event_lostwallet2", "An old lady walking in front of you loses her wallet.", v),
-		p = (0, n.createNode)("event_lostwallet1", "You are on your way home.", h),
+		l = (0, n.createNode)("event_lostwallet_kept_it", "你发现了她孙子的照片，和 $10。", null),
+		c = (0, n.createNode)("event_lostwallet_gave_back", "她感谢了你并递给你一些糖果。", u),
+		d = (0, n.createPath)("event_path_keeplostWallet", "留着", l),
+		f = (0, n.createPath)("event_path_giveBacklostwallet", "当然，交还钱包", c),
+		v = (0, n.createUserChoiceNode)("event_lostwallet_choice", "你会怎么做？", [f, d]),
+		h = (0, n.createNode)("event_lostwallet2", "一位走在你前面的老太太的钱包掉了出来。", v),
+		p = (0, n.createNode)("event_lostwallet1", "你在回家的路上。", h),
 		m = [p, h, v, c, l, u, s],
-		y = t.lostWallet = (0, n.createEvent)("event_lostWallet", "Lost Wallet", m);
+		y = t.lostWallet = (0, n.createEvent)("event_lostWallet", "掉落的钱包", m);
 	(0, i.createPredicateLock)(r.currentYear, u, function () {
 		return c.state.executed && r.currentYear.getValue() > c.state.executedOnDay / 365 + 10
 	}), (0, i.createMinimumValueLock)(r.currentYear, y, 1)
@@ -5406,7 +5406,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
 			var _ = new s.StatEffectiveAddModifier("happinessFromExpenseRatioMod", "Happiness from Expense Ratio (Max: 0.3)", 1, m);
 			v.happinessStat.addModifier(_), _.explain = function () {
 				var e = o.expenseRatioStat.effective;
-				return o.dailyExpensesStat.effective > 2e3 ? "对我的花销很满意。" : e < .7 ? "买得起更好的东西……" : e > 1.2 ? "花钱花的太多了。" : e <= 1 ? "对我的花销很满意。" : "Spending a little too much maybe."
+				return o.dailyExpensesStat.effective > 2e3 ? "对我的开销很满意。" : e < .7 ? "买得起更好的东西……" : e > 1.2 ? "花钱花的太多了。" : e <= 1 ? "对我的开销很满意。" : "Spending a little too much maybe."
 			};
 			var M = new h.Stat("totalWorkingHours", "Working, studying, researching", 0, 2),
 				b = new s.StatEffectiveAddModifier("workHoursMod", "Working", 1, u.work.duration),
@@ -7824,12 +7824,12 @@ webpackJsonp([1, 0], [function (e, t, a) {
 					},
 					expression: "foodCostFactor.value"
 				}
-			}), e._v("$" + e._s(e.stats.foodCostsPerDay.effective) + " / day"), a("br")], 1), e._v(" "), a("div", {
+			}), e._v("$" + e._s(e.stats.foodCostsPerDay.effective) + " / 天"), a("br")], 1), e._v(" "), a("div", {
 				staticClass: "row",
 				staticStyle: {
 					"padding-bottom": "20px"
 				}
-			}, [e._v("\n      Spending more on food increases your energy and happiness (as long as you can afford it)!\n  ")])])
+			}, [e._v("\n      花更多的钱在食物上将会增加你的活力和幸福度（只要你能负担得起）！\n  ")])])
 		},
 		staticRenderFns: [function () {
 			var e = this,
@@ -7837,7 +7837,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
 				a = e._self._c || t;
 			return a("div", {
 				staticClass: "row"
-			}, [a("h3", [e._v("Food Expenses")])])
+			}, [a("h3", [e._v("饮食开销")])])
 		}]
 	}
 }, function (e, t) {
@@ -7977,11 +7977,11 @@ webpackJsonp([1, 0], [function (e, t, a) {
 			var e = this,
 				t = e.$createElement,
 				a = e._self._c || t;
-			return a("div", [a("h3", [e._v("隐私政策")]), e._v("\n        我们不会收集或存储您的任何个人信息。"), a("br"), e._v("\n        但是，我们使用 Playfab 和 Google Analytics 进行内部使用分析。"), a("br"), e._v("\n        我们使用 Playfab 分析来引导游戏改进。"), a("br"), e._v("\n        Google Analytics 使用 cookie 来存储非个人身份信息。"), a("br"), e._v("\n        有关的更多信息，请参见 "), a("a", {
+			return a("div", [a("h3", [e._v("隐私政策")]), e._v("\n        我们不会收集或存储你的任何个人信息。"), a("br"), e._v("\n        但是，我们使用 Playfab 和 Google Analytics 进行内部使用分析。"), a("br"), e._v("\n        我们使用 Playfab 分析来引导游戏改进。"), a("br"), e._v("\n        Google Analytics 使用 cookie 来存储非个人身份信息。"), a("br"), e._v("\n        有关的更多信息，请参见 "), a("a", {
 				attrs: {
 					href: "https://support.google.com/analytics/answer/6004245?hl=en"
 				}
-			}, [e._v("https://support.google.com/analytics/answer/6004245?hl=en")]), e._v("。"), a("br"), e._v("\n        如果您不同意使用 Google Analytics，请下载一个浏览器插件来阻止 Google Analytics。"), a("br")])
+			}, [e._v("https://support.google.com/analytics/answer/6004245?hl=en")]), e._v("。"), a("br"), e._v("\n        如果你不同意使用 Google Analytics，请下载一个浏览器插件来阻止 Google Analytics。"), a("br")])
 		}]
 	}
 }, function (e, t) {
@@ -8354,7 +8354,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
 					rows: "10",
 					cols: "50"
 				}
-			}), e._v(" "), a("br"), e._v(" "), a("br"), e._v(" "), a("br"), e._v(" "), a("br"), e._v(" "), a("h1", [e._v("警告！下面的按钮将会删除您的进度！")]), e._v(" "), a("button", {
+			}), e._v(" "), a("br"), e._v(" "), a("br"), e._v(" "), a("br"), e._v(" "), a("br"), e._v(" "), a("h1", [e._v("警告！下面的按钮将会删除你的进度！")]), e._v(" "), a("button", {
 				staticClass: "btn",
 				attrs: {
 					role: "button"
