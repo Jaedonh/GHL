@@ -7280,7 +7280,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
 				staticClass: "modal-content"
 			}, [e._m(0), e._v(" "), a("div", {
 				staticClass: "modal-body"
-			}, [a("p", [e._v("Calculating progress since you left. " + e._s(e.daysBehind) + " days left.")]), e._v(" "), a("a", {
+			}, [a("p", [e._v("正在计算离开后的进度。 剩余" + e._s(e.daysBehind) + " 天。")]), e._v(" "), a("a", {
 				attrs: {
 					href: "#"
 				},
