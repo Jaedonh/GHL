@@ -3465,10 +3465,10 @@ webpackJsonp([1, 0], [function (e, t, a) {
 		u = a(113),
 		l = a(112),
 		c = a(114),
-		d = new n.Boost("boost_coffeine", "Copious Caffeine", "Double Energy for 2 Months", 60, 730),
-		f = new o.MultModifier("coffeine_mod", "Copious Caffeine", 10, 2);
+		d = new n.Boost("boost_coffeine", "大量咖啡因", "双倍精力持续2个月", 60, 730),
+		f = new o.MultModifier("coffeine_mod", "大量咖啡因", 10, 2);
 	(0, s.createSelectedLock)(d, f), (0, s.createLevelLock)(u.nutrition, d, 10), i.energyStat.addModifier(f);
-	var v = new n.Boost("boost_organize", "Organize your Stuff", "Double Energy for 3 Months", 90, 1095),
+	var v = new n.Boost("boost_organize", "Organize your Stuff", "双倍精力持续3个月", 90, 1095),
 		h = new o.MultModifier("boost_organize_mod", "Organized your Stuff", 10, 2);
 	(0, s.createSelectedLock)(v, h), (0, s.createLevelLock)(l.getStuffDone, v, 10), i.energyStat.addModifier(h);
 	var p = new n.Boost("boost_spa", "泡温泉", "双倍的活力持续 4 个月", 120, 1460),
@@ -4977,22 +4977,22 @@ webpackJsonp([1, 0], [function (e, t, a) {
 		d = function () {
 			(0, s.selectPane)(s.journalPane), (0, s.selectPane)(s.lifeSummaryPane), c.anomalyAverted.getValue() ? i.prestiger.grandPrestige() : i.prestiger.prestige(), l.pauseOnPrestige.getValue() && u.paused.setValue(!0)
 		},
-		f = (0, n.createNode)("event_groundhog_prestige", "Here we go!", null, d),
-		v = (0, n.createPath)("replyGroundhog", 'Reply "groundhog"', f),
-		h = (0, n.createNode)("event_brokengroundhog_prestige", "Here we go!", null, d),
-		p = (0, n.createPath)("brokenreplyGroundhog", 'Reply "groundhog"', h),
-		m = (0, n.createUserChoiceNode)("brokengroundhoggingRoot", "A message on your phone: 'Congrats! Now do it in one life. Reply \"groundhog\" to start over with more energy.'", [p]),
-		y = (0, n.createNode)("event_brokengroundhog2", "All days are of regular length!", m),
-		g = (0, n.createNode)("event_brokengroundhog1", "Everything is fine!", y),
-		_ = (0, n.createUserChoiceNode)("groundhoggingRoot", "A message on your phone: 'We failed. Reply \"groundhog\" to try again.'", [v]),
-		M = (0, n.createNode)("event_groundhog2", "Every day appears to last longer than the day before.", _),
-		b = (0, n.createNode)("event_groundhog1", "Something feels wrong...", M),
+		f = (0, n.createNode)("event_groundhog_prestige", "我们走吧！", null, d),
+		v = (0, n.createPath)("replyGroundhog", '回复“土拨鼠”', f),
+		h = (0, n.createNode)("event_brokengroundhog_prestige", "我们走吧！", null, d),
+		p = (0, n.createPath)("brokenreplyGroundhog", '回复“土拨鼠”', h),
+		m = (0, n.createUserChoiceNode)("brokengroundhoggingRoot", "手机上留言：'恭喜！ 现在在此生里面进行。 回复\“土拨鼠\”与更多的能量重新开始“。", [p]),
+		y = (0, n.createNode)("event_brokengroundhog2", "所有的日子都是正规的长度！", m),
+		g = (0, n.createNode)("event_brokengroundhog1", "一切安好！", y),
+		_ = (0, n.createUserChoiceNode)("groundhoggingRoot", "手机上的消息：'我们失败了。 回复“土拨鼠”再试一次。'", [v]),
+		M = (0, n.createNode)("event_groundhog2", "每天似乎比前一天持续更长时间。", _),
+		b = (0, n.createNode)("event_groundhog1", "感觉什么东西出错了...", M),
 		k = function () {
 			return c.anomalyAverted.getValue() ? 1 : 0
 		},
 		w = (0, n.createAutoChoiceNode)("event_gh_ano", "...", k, [b, g]),
 		L = [w, b, M, _, g, y, m, h, f],
-		C = t.groundHogging = (0, n.createEvent)("groundhogging", "Groundhog", L),
+		C = t.groundHogging = (0, n.createEvent)("groundhogging", "土拨鼠", L),
 		x = function () {
 			return o.currentYear.getValue() >= 42 || c.anomalyAverted.getValue()
 		};
