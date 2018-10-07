@@ -276,7 +276,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
 			var n = function () {
 				return e.xp.state.level >= a
 			};
-			t.locks.addLock(new c(e.name + " Level " + a, n, [e])), e.xp.subscribe(t)
+			t.locks.addLock(new c(e.name + " 等级 " + a, n, [e])), e.xp.subscribe(t)
 		});
 	t.createLevelLockChain = function (e, t) {
 		for (var a = 1; a < e.length; a++) d(e[a - 1], e[a], t)
@@ -1083,7 +1083,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
 				default)(this, (t.__proto__ || (0, r.
 					default)(t)).call(this, e, a, new k));
 			i.name = a, i.subjects = n;
-			var o = (0, g.createResearchXpPerHourStat)(i.id + "_xp_per_hour", i.name + " XP/h");
+			var o = (0, g.createResearchXpPerHourStat)(i.id + "_xp_per_hour", i.name + " 经验/小时");
 			return i.xp = new y.XPModule(i.id + "experience", i.name + " experience", o), i.xp.nextLevelAtXp = (0, y.linearXpIncrease)(100), i.effect = "", i.logUnlock = !0, i.importance = 1, i
 		}
 		return (0, v.
@@ -1299,17 +1299,17 @@ webpackJsonp([1, 0], [function (e, t, a) {
 		r = n(i),
 		o = a(116),
 		s = t.topLevelPanes = new o.PaneGroup,
-		u = t.jobPane = new o.Pane("job-pane", "Job", "job-display", s, !1),
-		l = (t.readingPane = new o.Pane("reading-pane", "Reading", "study-fields", s), t.researchPane = new o.Pane("research-pane", "Research", "research-display", s)),
+		u = t.jobPane = new o.Pane("job-pane", "工作", "job-display", s, !1),
+		l = (t.readingPane = new o.Pane("reading-pane", "Reading", "study-fields", s), t.researchPane = new o.Pane("research-pane", "研究", "research-display", s)),
 		c = new o.PaneGroup,
-		d = (t.spendingPane = new o.Pane("spending-pane", "Spending", "spending-display", c), t.housingPane = new o.Pane("housing-pane", "Home", "housing-display", c), t.boostsPane = new o.Pane("boosts-pane", "Boosts", "boosts-display", c), t.happinessPane = new o.Pane("happiness-pane", "Mood", "happiness-explain", s)),
-		f = t.lifestylePane = new o.Pane("lifestyle-pane", "Lifestyle", "lifestyle-display", s, !1, c.panes),
-		v = t.eventPane = new o.Pane("event-pane", "Events", "events-display", s),
-		h = t.settingsPane = new o.Pane("settings-pane", "Settings", "settings-display", s, !0),
-		p = t.aboutPane = new o.Pane("about-pane", "About", "about-display", s, !0),
-		m = t.privacyPane = new o.Pane("privacy-pane", "Privacy", "privacy-display", s, !0),
+		d = (t.spendingPane = new o.Pane("spending-pane", "Spending", "spending-display", c), t.housingPane = new o.Pane("housing-pane", "Home", "housing-display", c), t.boostsPane = new o.Pane("boosts-pane", "Boosts", "boosts-display", c), t.happinessPane = new o.Pane("happiness-pane", "心情", "happiness-explain", s)),
+		f = t.lifestylePane = new o.Pane("lifestyle-pane", "生活方式", "lifestyle-display", s, !1, c.panes),
+		v = t.eventPane = new o.Pane("event-pane", "事件", "events-display", s),
+		h = t.settingsPane = new o.Pane("settings-pane", "设置", "settings-display", s, !0),
+		p = t.aboutPane = new o.Pane("about-pane", "关于", "about-display", s, !0),
+		m = t.privacyPane = new o.Pane("privacy-pane", "隐私", "privacy-display", s, !0),
 		y = (t.amazonPane = new o.Pane("amazon-affiliate", "Amazon Affiliate Program", "amazon-display", s, !0), new o.PaneGroup),
-		g = (t.achievementPane = new o.Pane("achievement-pane", "Achievements", "achievements-display", y), t.logPane = new o.Pane("log-pane", "Log", "log-display", y), t.lifeSummaryPane = new o.Pane("life-summary-pane", "History", "life-summary", y), t.journalPane = new o.Pane("journal-pane", "Journal", "journal-display", s, !1, y.panes));
+		g = (t.achievementPane = new o.Pane("achievement-pane", "Achievements", "achievements-display", y), t.logPane = new o.Pane("log-pane", "Log", "log-display", y), t.lifeSummaryPane = new o.Pane("life-summary-pane", "History", "life-summary", y), t.journalPane = new o.Pane("journal-pane", "备忘录", "journal-display", s, !1, y.panes));
 	t.panes = [d, u, l, f, v, g, h, p, m], t.selectPane = function (e) {
 		if (e.paneGroup.allowMultiple) e.toggle();
 		else {
@@ -1399,7 +1399,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
 			return (0, d.
 				default)(t, e), t
 		}(f.Stat),
-		m = t.baseWorkXpPerHourStat = new f.Stat("baseWorkXpPerHourStat", "Base Work XP", 1, 2, "", "/h");
+		m = t.baseWorkXpPerHourStat = new f.Stat("baseWorkXpPerHourStat", "基础工作经验", 1, 2, "", "/小时");
 	m.addModifier(v.standardEnergyModifier);
 	var y = (t.createWorkXpPerHourStat = function (e, t) {
 		var a = new p(e, t),
@@ -1836,8 +1836,8 @@ webpackJsonp([1, 0], [function (e, t, a) {
 					default)(t)).call(this, e, a, new L));
 			r.xpPerHourStat = n, r.nextLevelAtXp = i, r.groundhogFactorStat = new x(r.id + "_groundhogFactorStat", "Groundhog Factor", r);
 			var o = new b.StatEffectiveMultModifier(r.id + "_groundhogFactorMod", "Groundhog Factor", 100, r.groundhogFactorStat);
-			r.xpPerHourStat.addModifier(o), r.xpPerDayStat = new M.Stat(r.id + "_xppday", r.name + " XP/day", 0, 2);
-			var u = new b.StatEffectiveAddModifier(r.id + "_xphour2day", "XP/h", 1, r.xpPerHourStat);
+			r.xpPerHourStat.addModifier(o), r.xpPerDayStat = new M.Stat(r.id + "_xppday", r.name + " 经验/天", 0, 2);
+			var u = new b.StatEffectiveAddModifier(r.id + "_xphour2day", "经验/小时", 1, r.xpPerHourStat);
 			return r.xpPerDayStat.addModifier(u), r.levelUp = !1, r.lastLevelUp = -1, r.update(), r
 		}
 		return (0, p.
@@ -2053,7 +2053,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
 		m = t.yugleCeo = new n.Job("yugle10", "CEO"),
 		y = [s, u, l, c, d, f, v, h, p, m];
 	(0, o.configureXpProgression)(y, 1e3, 2, 8), (0, n.configurePayProgression)(y, 10, 300, 2), s.setBasePay(0), (0, r.createLevelLockChain)(y, 10);
-	t.yugle = new i.Career("yugle", "Yugle", y)
+	t.yugle = new i.Career("yugle", "尤格", y)
 }, function (e, t, a) {
 	"use strict";
 
@@ -2704,18 +2704,18 @@ webpackJsonp([1, 0], [function (e, t, a) {
 		r = a(74),
 		o = a(9),
 		s = a(108),
-		u = t.burgerFlipper = new n.Job("bm1", "Burger Flipper", 10, !0),
-		l = new n.Job("bm2", "Chief Flipper"),
-		c = new n.Job("bm3", "Kitchen Manager"),
-		d = new n.Job("bm4", "Shift Manager"),
-		f = new n.Job("bm5", "Assistant Manager"),
-		v = new n.Job("bm6", "Restaurant Manager"),
-		h = new n.Job("bm7", "Regional Manager"),
-		p = new n.Job("bm8", "Chief Strategist"),
-		m = t.bunMastersCeo = new n.Job("bm9", "CEO"),
+		u = t.burgerFlipper = new n.Job("bm1", "汉堡服务生", 10, !0),
+		l = new n.Job("bm2", "首席服务生"),
+		c = new n.Job("bm3", "厨房经理"),
+		d = new n.Job("bm4", "值班经理"),
+		f = new n.Job("bm5", "助理经理"),
+		v = new n.Job("bm6", "餐厅经理"),
+		h = new n.Job("bm7", "区域经理"),
+		p = new n.Job("bm8", "首席策略家"),
+		m = t.bunMastersCeo = new n.Job("bm9", "首席执行官"),
 		y = [u, l, c, d, f, v, h, p, m];
 	(0, i.configureXpProgression)(y, 600, 2.2, 8), (0, n.configurePayProgression)(y, 5, 150, 2), (0, o.createLevelLockChain)(y, 10), (0, o.createLevelLock)(s.leadership, d, 10), (0, o.createLevelLock)(s.leadership, h, 50), (0, o.createLevelLock)(s.leadership, m, 100);
-	t.bunMasters = new r.Career("bunMasters", "BunMasters", y)
+	t.bunMasters = new r.Career("bunMasters", "汉堡大师", y)
 }, function (e, t, a) {
 	"use strict";
 
@@ -2917,8 +2917,8 @@ webpackJsonp([1, 0], [function (e, t, a) {
 		h = t.programming4 = new s.Book("programming4", "C++ Primer", "C++ - more twists than Game of Thrones.", 300, "0321714113"),
 		p = t.programming5 = new s.Book("programming5", "SICP", "Let's dive in a little deeper.", 400, "0262510871");
 	(0, o.createCompletedOrReadingListLock)(d, f), (0, o.createCompletedOrReadingListLock)(f, v), (0, o.createCompletedOrReadingListLock)(v, h), (0, o.createCompletedOrReadingListLock)(h, p);
-	var m = t.programming = new u.Area("area_programming", "Programming", [d, f, v, h, p]),
-		y = new l.LevelAddMultModifier("programming_research_level_mod", "Research: Programming", 2, m.xp, .01),
+	var m = t.programming = new u.Area("area_programming", "编程", [d, f, v, h, p]),
+		y = new l.LevelAddMultModifier("programming_research_level_mod", "研究: 编程", 2, m.xp, .01),
 		g = !0,
 		_ = !1,
 		M = void 0;
@@ -5378,7 +5378,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
 				var e = Math.floor(d.currentYear.getValue() / 5),
 					t = c.currentHomeContainer.home.quality.effective,
 					a = t - e;
-				return a >= 1 ? "Nice home." : a <= -1 ? "I want a nicer home." : "Content about my home."
+				return a >= 1 ? "Nice home." : a <= -1 ? "我想要一个更好的家。" : "Content about my home."
 			}, d.currentYear.subscribe(a);
 			var n = .5,
 				i = function (e) {
@@ -5387,7 +5387,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
 				},
 				r = new s.StatEffectiveAddModifier("happinessFromSleepHoursMod", "Sleep (Max 0.5)", 1, u.sleep.duration, i);
 			v.happinessStat.addModifier(r), r.explain = function () {
-				return u.sleep.duration.effective >= 540 ? "Definitely getting enough sleep" : u.sleep.duration.effective <= 300 ? "Must...sleep." : "Just enough sleep."
+				return u.sleep.duration.effective >= 540 ? "显然有了足够的睡眠" : u.sleep.duration.effective <= 300 ? "Must...sleep." : "足够的睡眠。"
 			};
 			var f = new s.MultModifier("sleepDeprivation", "Sleep Deprivation", 10, 0);
 			v.happinessStat.addModifier(f);
@@ -5406,7 +5406,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
 			var _ = new s.StatEffectiveAddModifier("happinessFromExpenseRatioMod", "Happiness from Expense Ratio (Max: 0.3)", 1, m);
 			v.happinessStat.addModifier(_), _.explain = function () {
 				var e = o.expenseRatioStat.effective;
-				return o.dailyExpensesStat.effective > 2e3 ? "Happy about my spending." : e < .7 ? "Could afford nicer things..." : e > 1.2 ? "Spending way too much." : e <= 1 ? "Happy about my spending." : "Spending a little too much maybe."
+				return o.dailyExpensesStat.effective > 2e3 ? "Happy about my spending." : e < .7 ? "买得起更好的东西……" : e > 1.2 ? "Spending way too much." : e <= 1 ? "Happy about my spending." : "Spending a little too much maybe."
 			};
 			var M = new h.Stat("totalWorkingHours", "Working, studying, researching", 0, 2),
 				b = new s.StatEffectiveAddModifier("workHoursMod", "Working", 1, u.work.duration),
@@ -5418,7 +5418,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
 			});
 			v.happinessStat.addModifier(L), L.explain = function () {
 				var e = L.factor;
-				return e < .2 ? "I'm overworked." : e < .4 ? "Feeling slightly stressed out." : e >= .4 ? "Good work-life balance." : ""
+				return e < .2 ? "I'm overworked." : e < .4 ? "Feeling slightly stressed out." : e >= .4 ? "很好地平衡工作与生活。" : ""
 			}
 		};
 	t.setupGame = function () {
@@ -7192,7 +7192,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
 				staticStyle: {
 					width: "5rem"
 				}
-			}, [e._v(e._s(e.settings.xpPerHour.getValue() ? "XP/h" : "XP/day"))]), e._v(" "), e.time.currentLifeThisLoop.getValue() > 1 ? a("th", {
+			}, [e._v(e._s(e.settings.xpPerHour.getValue() ? "经验/小时" : "经验/天"))]), e._v(" "), e.time.currentLifeThisLoop.getValue() > 1 ? a("th", {
 				staticClass: "text-right",
 				staticStyle: {
 					width: "3rem"
@@ -7224,7 +7224,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
 						attrs: {
 							colspan: "6"
 						}
-					}, [e._v("\n            Required: "), a("i", [e._v(e._s(n.locks.lockString()))])])]) : e._e()
+					}, [e._v("\n            需要: "), a("i", [e._v(e._s(n.locks.lockString()))])])]) : e._e()
 				}), e._v(" "), e._m(0, !0)], 2)
 			})], 2)]), e._v(" "), a("div", {
 				staticClass: "row",
@@ -7238,7 +7238,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
 						e.settings.xpPerHour.toggleValue()
 					}
 				}
-			}, [e._v("\n      " + e._s(e.settings.xpPerHour.getValue() ? "XP/h" : "XP/day") + "\n    ")]), e._v(" "), a("span", {
+			}, [e._v("\n      " + e._s(e.settings.xpPerHour.getValue() ? "经验/小时" : "经验/天") + "\n    ")]), e._v(" "), a("span", {
 				staticStyle: {
 					"padding-left": "20px"
 				}
@@ -7886,19 +7886,19 @@ webpackJsonp([1, 0], [function (e, t, a) {
 				staticStyle: {
 					width: "4rem"
 				}
-			}, [e._v("Level")]), e._v(" "), a("th", {
+			}, [e._v("等级")]), e._v(" "), a("th", {
 				staticStyle: {
 					width: "6rem"
 				}
-			}, [e._v("Income/h")]), e._v(" "), a("th", {
+			}, [e._v("收入/小时")]), e._v(" "), a("th", {
 				staticStyle: {
 					width: "5rem"
 				}
-			}, [e._v("XP needed")]), e._v(" "), a("th", {
+			}, [e._v("升级所需经验")]), e._v(" "), a("th", {
 				staticStyle: {
 					width: "5rem"
 				}
-			}, [e._v(e._s(e.settings.xpPerHour.getValue() ? "XP/h" : "XP/day"))]), e._v(" "), e.time.currentLifeThisLoop.getValue() > 1 ? a("th", {
+			}, [e._v(e._s(e.settings.xpPerHour.getValue() ? "经验/小时" : "经验/天"))]), e._v(" "), e.time.currentLifeThisLoop.getValue() > 1 ? a("th", {
 				staticClass: "text-right",
 				staticStyle: {
 					width: "3rem"
@@ -7930,7 +7930,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
 						attrs: {
 							colspan: "6"
 						}
-					}, [e._v("\n            Required: "), a("i", [e._v(e._s(n.locks.lockString()))])])]) : e._e()
+					}, [e._v("\n            需要: "), a("i", [e._v(e._s(n.locks.lockString()))])])]) : e._e()
 				}), e._v(" "), e._m(0, !0)], 2) : e._e()
 			})], 2)]), e._v(" "), a("div", {
 				staticClass: "row",
@@ -7944,7 +7944,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
 						e.settings.xpPerHour.toggleValue()
 					}
 				}
-			}, [e._v("\n      " + e._s(e.settings.xpPerHour.getValue() ? "XP/h" : "XP/day") + "\n    ")]), e._v(" "), a("span", {
+			}, [e._v("\n      " + e._s(e.settings.xpPerHour.getValue() ? "经验/小时" : "经验/天") + "\n    ")]), e._v(" "), a("span", {
 				staticStyle: {
 					"padding-left": "20px"
 				}
@@ -8257,7 +8257,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
 			var e = this,
 				t = e.$createElement,
 				a = e._self._c || t;
-			return a("div", [a("h5", [e._v("Gameplay")]), e._v(" "), a("input", {
+			return a("div", [a("h5", [e._v("游戏性")]), e._v(" "), a("input", {
 				directives: [{
 					name: "model",
 					rawName: "v-model",
@@ -8287,7 +8287,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
 				attrs: {
 					for: "checkbox-pauseOnPrestige"
 				}
-			}, [e._v("Auto-Pause when starting a new life")]), e._v(" "), a("br"), e._v(" "), a("input", {
+			}, [e._v("在开始新生活时自动暂停")]), e._v(" "), a("br"), e._v(" "), a("input", {
 				directives: [{
 					name: "model",
 					rawName: "v-model",
