@@ -2106,7 +2106,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
             }]), t
         }(g.BasicEntity),
         I = t.studentCuisine = new E("simplecooking", "Student Cuisine", 90, 20, .25, !0),
-        D = t.fastFood = new E("fastfood", "BunMasters", 60, 30, .25),
+        D = t.fastFood = new E("fastfood", "汉堡大王", 60, 30, .25),
         j = new E("regularcooking", "Regular Cooking", 120, 30, .9),
         N = t.yugleCampus = new E("yuglecampus", "Yugle Campus", 60, 50, 1.25),
         O = new E("fancycooking", "Fancy Cooking", 180, 70, 2),
@@ -7674,7 +7674,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
                     attrs: {
                         colspan: "3"
                     }
-                }, [e._v("\n          Requires: " + e._s(t.locks.lockString()) + "\n        ")])]) : e._e()
+                }, [e._v("\n          需求: " + e._s(t.locks.lockString()) + "\n        ")])]) : e._e()
             }))])])
         },
         staticRenderFns: [function () {
@@ -7686,7 +7686,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
                 staticStyle: {
                     "padding-top": "20px"
                 }
-            }, [a("h5", [e._v(" Assistants")])])
+            }, [a("h5", [e._v(" 助理")])])
         }]
     }
 }, function (e, t) {
@@ -7746,7 +7746,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
                 staticStyle: {
                     "padding-top": "20px"
                 }
-            }, [a("small", [e._v("Saved " + e._s(e.timeSinceLastSave()) + "s ago")])])], 1)
+            }, [a("small", [e._v("已保存，在 " + e._s(e.timeSinceLastSave()) + "之前")])])], 1)
         },
         staticRenderFns: []
     }
@@ -7802,9 +7802,9 @@ webpackJsonp([1, 0], [function (e, t, a) {
                     }
                 }, [a("span", {
                     staticClass: "collapse-icon rounded-circle"
-                }, [e._v(e._s(t.state.selected ? "-" : "+"))]), a("b", [e._v(e._s(t.field.name))])]), e._v(" "), a("td", [e._v("Level")]), e._v(" "), a("td", [e._v("Effect")]), e._v(" "), a("td", [e._v("XP left")]), e._v(" "), a("td", [e._v(e._s(e.settings.xpPerHour.getValue() ? "XP/h" : "XP/day"))]), e._v(" "), e.time.currentLifeThisLoop.getValue() > 1 ? a("td", {
+                }, [e._v(e._s(t.state.selected ? "-" : "+"))]), a("b", [e._v(e._s(t.field.name))])]), e._v(" "), a("td", [e._v("等级")]), e._v(" "), a("td", [e._v("效果")]), e._v(" "), a("td", [e._v("剩余经验")]), e._v(" "), a("td", [e._v(e._s(e.settings.xpPerHour.getValue() ? "经验/小时" : "经验/天"))]), e._v(" "), e.time.currentLifeThisLoop.getValue() > 1 ? a("td", {
                     staticClass: "text-right"
-                }, [e._v("Max Lvl")]) : e._e()]) : a("tr", {
+                }, [e._v("最高等级")]) : e._e()]) : a("tr", {
                     staticClass: "tr-name"
                 }, [a("td", {
                     attrs: {
@@ -7826,7 +7826,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
                         attrs: {
                             colspan: "6"
                         }
-                    }, [e._v("\n            Required: "), a("i", [e._v(e._s(n.locks.lockString()))])])]) : e._e()
+                    }, [e._v("\n            需求: "), a("i", [e._v(e._s(n.locks.lockString()))])])]) : e._e()
                 }), e._v(" "), e._m(0, !0)], 2)
             })], 2)]), e._v(" "), a("div", {
                 staticClass: "row",
@@ -7878,9 +7878,9 @@ webpackJsonp([1, 0], [function (e, t, a) {
                 staticClass: "modal-dialog modal-lg"
             }, [a("div", {
                 staticClass: "modal-content"
-            }, [e._m(0), e._v("\n        You gained " + e._s(e.formatDays(e.time.offlineBonusTicks)) + " bonus days (double speed) while you were offline.\n        "), a("nobr", [e._v("Click "), a("i", {
+            }, [e._m(0), e._v("\n        当你离线时，你获得了 " + e._s(e.formatDays(e.time.offlineBonusTicks)) + " 天数奖励 (双倍速度) \n        "), a("nobr", [e._v("点击 "), a("i", {
                 staticClass: "icon ion-ios-fastforward-outline"
-            }), e._v(" to use them.")])], 1)])])])
+            }), e._v(" 使用它们。")])], 1)])])])
         },
         staticRenderFns: [function () {
             var e = this,
@@ -7890,7 +7890,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
                 staticClass: "modal-header"
             }, [a("h5", {
                 staticClass: "modal-title"
-            }, [e._v("Offline Bonus")]), e._v(" "), a("button", {
+            }, [e._v("离线奖励")]), e._v(" "), a("button", {
                 staticClass: "close",
                 attrs: {
                     type: "button",
@@ -8009,7 +8009,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
                     display: "flex",
                     "justify-content": "space-between"
                 }
-            }, [a("span", [e._v("\n        Age " + e._s(18 + e.time.currentDay.getYear()) + "\n        Day " + e._s(e.time.currentDay.getDayOfYear()) + "\n    ")]), e._v(" "), a("span", [a("a", {
+            }, [a("span", [e._v("\n        年龄 " + e._s(18 + e.time.currentDay.getYear()) + "\n    岁 " + e._s(e.time.currentDay.getDayOfYear()) + " 天\n    ")]), e._v(" "), a("span", [a("a", {
                 class: ["icon", e.settings.playSounds.getValue() ? "ion-ios-volume-up" : "ion-ios-volume-off"],
                 staticStyle: {
                     "font-size": "x-large"
@@ -8090,14 +8090,14 @@ webpackJsonp([1, 0], [function (e, t, a) {
                 }, [a(t.component, {
                     tag: "div"
                 })]) : e._e()
-            }))], 1)]) : a("div", [e._v("\n    You should probably learn stuff if you don't want to flip burgers all your life."), a("br"), e._v("\n    Actually, you should learn stuff even if you do want to flip burgers all your life."), a("br"), e._v(" "), a("button", {
+            }))], 1)]) : a("div", [e._v("\n    如果你不想一辈子当汉堡服务员，你应该学习些东西。"), a("br"), e._v("\n    实际上，即使你想要终生当汉堡服务员，也应该学习些东西。"), a("br"), e._v(" "), a("button", {
                 staticClass: "btn btn-success",
                 on: {
                     click: function (t) {
                         e.labPane.state.explained = !0
                     }
                 }
-            }, [e._v("Learn Stuff")])])])
+            }, [e._v("学习东西")])])])
         },
         staticRenderFns: []
     }
@@ -8209,7 +8209,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
                 staticStyle: {
                     "padding-bottom": "20px"
                 }
-            }, [e._v("\n      Higher food quality increases your health!\n  ")]), e._v(" "), a("div", {
+            }, [e._v("\n      更高的食品质量会提升您的健康度!\n  ")]), e._v(" "), a("div", {
                 staticClass: "row"
             }, [a("table", [e._m(1), e._v(" "), e._l(e.foodOptions, function (t) {
                 return a("tr", [a("td", [a("button", {
@@ -8241,7 +8241,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
                 a = e._self._c || t;
             return a("div", {
                 staticClass: "row"
-            }, [a("h3", [e._v("Food Expenses")])])
+            }, [a("h3", [e._v("食物支出")])])
         }, function () {
             var e = this,
                 t = e.$createElement,
@@ -8964,7 +8964,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
                         e.autoPromote.toggleValue()
                     }
                 }
-            }, [a("small", [e._v("Auto-Promote is " + e._s(e.autoPromote.select("On", "Off")))])]), e._v(" "), e.userInventory.haveAutoPromote ? a("span", [a("label", {
+            }, [a("small", [e._v("自动提升状态: " + e._s(e.autoPromote.select("On", "Off")))])]), e._v(" "), e.userInventory.haveAutoPromote ? a("span", [a("label", {
                 attrs: {
                     for: "apml"
                 }
