@@ -8294,7 +8294,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
             var e = this,
                 t = e.$createElement,
                 a = e._self._c || t;
-            return a("div", [e._v("\n  For several reasons, the Groundhog Market is discontinued."), a("br"), e._v("\n  Auto-Research, auto-promotion, and auto-boosting is available by default now. There is no limit to speed-up time gained when offline anymore."), a("br"), e._v("\n  This also means that Groundhog Life can be open-sourced easier, which is planned for the near future."), a("br")])
+            return a("div", [e._v("\n  由于一些原因，土拨鼠市场被中断。"), a("br"), e._v("\n  自动研究, 自动晋升, 和自动提神现在已经默认激活了。离线时获得的加速时间没有限制。"), a("br"), e._v("\n  这也意味着土拨鼠生活可以更容易的开源，这个计划会在不久的将来实现。"), a("br")])
         }]
     }
 }, function (e, t) {
