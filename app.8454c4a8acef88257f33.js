@@ -1874,7 +1874,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
         m = t.darkPlateauCeo = new n.Job("dp10", "总裁"),
         y = [o, u, l, c, d, f, v, h, p, m];
     (0, s.configureXpProgression)(y, 2200, 2, 8), (0, n.configurePayProgression)(y, 30, 400, 2), (0, r.createLevelLockChain)(y, 10);
-    t.darkPlateau = new i.Career("dark_plateau", "黑暗高原", y)
+    t.darkPlateau = new i.Career("dark_plateau", "黑暗森林", y)
 }, function (e, t, a) {
     "use strict";
 
@@ -4868,22 +4868,22 @@ webpackJsonp([1, 0], [function (e, t, a) {
     var n = a(58),
         i = a(11),
         r = a(42),
-        s = (0, n.createNode)("event_a13b", "You start researching mirrored laser guns.", null),
-        o = (0, n.createNode)("event_a13b0", "You need to be CEO of Dark Plateau to build weapons.", s),
-        u = (0, n.createNode)("event_a13", "Consider destroying it. But there might be more than one.", o),
-        l = (0, n.createNode)("event_a12", "Maybe that thing is responsible for the loop you're stuck in.", u),
-        c = (0, n.createNode)("event_a11", "Furthermore, it seems to move at high speed towards the solar system.", l),
-        d = (0, n.createNode)("event_a10", "There are power generators, engines, and thousands of moving organic entities.", c),
-        f = (0, n.createNode)("event_a9", "In SciFi-terms, it looks like a spaceship.", d),
-        v = (0, n.createNode)("event_a8", "By reversing formulas for dark matter concentration, you create a model of the mirror-matter anomaly.", f),
-        h = (0, n.createNode)("event_a7", "Theory: the anomaly is induced by mirror-matter, similar in structure to ordinary matter yet undetectable.", v),
-        p = (0, n.createNode)("event_a5", "This is highly unusual.", h),
-        m = (0, n.createNode)("event_a4", "Such patterns can be induced by ordinary matter, but the sector appears empty.", p),
-        y = (0, n.createNode)("event_a3", "The dark matter in this sector seems to follow geometric patterns.", m),
-        _ = (0, n.createNode)("event_a2", "'Running DM Scanner 7.42...WARNING: major formula mismatch in Sector 7G'", y),
-        g = (0, n.createNode)("event_a1", "You're testing a new formula for dark matter concentration in space.", _),
+        s = (0, n.createNode)("event_a13b", "你开始研究镜像激光枪。", null),
+        o = (0, n.createNode)("event_a13b0", "你需要成为黑暗森林的总裁来建造武器.", s),
+        u = (0, n.createNode)("event_a13", "考虑毁灭它.但它们可能不止一个.", o),
+        l = (0, n.createNode)("event_a12", "也许这就是你陷入不断循环的原因.", u),
+        c = (0, n.createNode)("event_a11", "此外,它似乎朝着太阳系高速移动.", l),
+        d = (0, n.createNode)("event_a10", "有发电机,引擎和数千个移动的有机实体组成.", c),
+        f = (0, n.createNode)("event_a9", "在科幻方面,它看起来像一个太空飞船.", d),
+        v = (0, n.createNode)("event_a8", "通过反转暗物质浓度公式,你可以创建镜像物质异常模型。", f),
+        h = (0, n.createNode)("event_a7", "理论:这种反常现象是由镜面物质引起的,其结构与普通物质相似,但还无法探测到.", v),
+        p = (0, n.createNode)("event_a5", "这是非常反常的.", h),
+        m = (0, n.createNode)("event_a4", "这种模式可能是由普通物质引起的,但扇区看起来似乎空的.", p),
+        y = (0, n.createNode)("event_a3", "这个扇区中的暗物质似乎遵循几何模式.", m),
+        _ = (0, n.createNode)("event_a2", "'运行DM扫描仪7.42...警告:主要公式无法与扇区7G内匹配'", y),
+        g = (0, n.createNode)("event_a1", "你正在测试一个新的宇宙暗物质浓度公式.", _),
         b = [g, _, y, m, p, h, v, f, d, c, l, u, o, s],
-        M = t.anomalyEvent = (0, n.createEvent)("event_anomaly", "First Contact", b);
+        M = t.anomalyEvent = (0, n.createEvent)("event_anomaly", "第一次接触", b);
     (0, i.createLevelLock)(r.dmScanner, M, 10), (0, i.createLevelLock)(r.dmScanner, g, 10), (0, i.createLevelLock)(r.dmScanner, _, 15), (0, i.createLevelLock)(r.dmScanner, y, 45), (0, i.createLevelLock)(r.anomaly, p, 5), (0, i.createLevelLock)(r.anomaly, h, 95), (0, i.createLevelLock)(r.mirrorMatter, v, 110), (0, i.createLevelLock)(r.demirrorAnomaly, f, 190), (0, i.createLevelLock)(r.studyMirroredShip, d, 240), (0, i.createLevelLock)(r.laserGun, s, 1)
 }, function (e, t, a) {
     "use strict";
@@ -4897,20 +4897,20 @@ webpackJsonp([1, 0], [function (e, t, a) {
         o = a(150),
         u = a(114),
         l = a(49),
-        c = (0, n.createNode)("event_dp_success2", "Success! They reply with a job offer.", null, function () {
+        c = (0, n.createNode)("event_dp_success2", "成功! 他们以一份工作邀请作为答复.", null, function () {
             return o.unlockedDarkPlateau.setValue(s.currentLife.getValue())
         }),
-        d = (0, n.createNode)("event_dp_failure", "...but you are just not good enough at quantum physics (Level 50 required at age 28).", null),
-        f = (0, n.createNode)("event_dp_success", "Looks right, send it.", c),
+        d = (0, n.createNode)("event_dp_failure", "...但你在量子物理方面涉猎不深(在28岁时达到50级).", null),
+        f = (0, n.createNode)("event_dp_success", "看起来没错,发送.", c),
         v = function () {
             return u.qm.xp.state.level >= 50 ? 0 : 1
         },
-        h = (0, n.createAutoChoiceNode)("event_dp4", "You try...", v, [f, d]),
-        p = (0, n.createNode)("event_dp3", "Looks like you are supposed to solve them.", h),
-        m = (0, n.createNode)("event_dp2", "It contains some complicated quantum physics equations.", p),
-        y = (0, n.createNode)("event_dp1", "An email from a company called Dark Plateau.", m),
+        h = (0, n.createAutoChoiceNode)("event_dp4", "你尝试...", v, [f, d]),
+        p = (0, n.createNode)("event_dp3", "看来是希望你能解决这些问题.", h),
+        m = (0, n.createNode)("event_dp2", "邮件内包含一些复杂的量子物理方程.", p),
+        y = (0, n.createNode)("event_dp1", "收到一封来自黑暗森林公司的邮件.", m),
         _ = [y, m, p, h, f, d, c],
-        g = t.dp = (0, n.createEvent)("event_dp", "Dark Plateau?", _);
+        g = t.dp = (0, n.createEvent)("event_dp", "黑暗森林?", _);
     (0, i.createMinimumValueLock)(r.currentYear, g, 10), (0, i.createMinimumValueLock)(r.currentYear, h, 10), (0, i.createCustomLock)([o.unlockedDarkPlateau], g, function () {
         return o.unlockedDarkPlateau.getValue() === -1 || o.unlockedDarkPlateau.getValue() === s.currentLife.getValue()
     }), (0, i.createCustomLock)([o.unlockedDarkPlateau], l.darkPlateau, function () {
@@ -4947,28 +4947,28 @@ webpackJsonp([1, 0], [function (e, t, a) {
         h = a(34),
         p = t.prestigeAction = function () {
             var e = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-            (0, l.selectPane)(l.journalPane), (0, l.selectPane)(l.lifeSummaryPane), i.prestiger.prestige(e), h.messageBox.addMessage("You just turned 18. Again. Expertise from previous lives makes things easier this time."), d.pauseOnPrestige.getValue() && c.paused.setValue(!0), window.kongregate.services.isGuest() || window.kongregate.stats.submit("Groundhogs", u.currentLife.getValue()), r.saver.requestSave()
+            (0, l.selectPane)(l.journalPane), (0, l.selectPane)(l.lifeSummaryPane), i.prestiger.prestige(e), h.messageBox.addMessage("你变回了18岁.再一次.不过你前几世的记忆使事情变得更容易了."), d.pauseOnPrestige.getValue() && c.paused.setValue(!0), window.kongregate.services.isGuest() || window.kongregate.stats.submit("Groundhogs", u.currentLife.getValue()), r.saver.requestSave()
         },
         m = function () {
-            h.messageBox.addMessage("WARNING: EXPERIENCING MAJOR TIME DILATION. CHECK YOUR EVENTS.", "bell", "alert-danger")
+            h.messageBox.addMessage("警告:经历了重大的时间膨胀.查看你的事件.", "bell", "alert-danger")
         },
-        y = (0, n.createNode)("event_groundhog_prestige", "Here we go!", null, p),
-        _ = (0, n.createPath)("replyGroundhog", 'Reply "groundhog"', y),
-        g = (0, n.createNode)("event_progressgroundhog_prestige", "Here we go!", null, p),
-        b = (0, n.createPath)("progressreplyGroundhog", 'Reply "groundhog"', g),
-        M = (0, n.createUserChoiceNode)("progressgroundhoggingRoot", "'Reply \"groundhog\" to try again.'", [b]),
-        k = (0, n.createNode)("event_progressgroundhog2", "But the alien fleet is large, and age will catch up with you. Start over when your progress is slowing down.", M),
-        w = (0, n.createNode)("event_progressgroundhog1", "You are making progress!", k),
-        x = (0, n.createUserChoiceNode)("groundhoggingRoot", "A message on your phone: 'They are here. Reply \"groundhog\" to try again.'", [_]),
-        P = (0, n.createNode)("event_groundhog2", "Every day appears to last longer than the day before.", x),
+        y = (0, n.createNode)("event_groundhog_prestige", "我们重新开始吧!", null, p),
+        _ = (0, n.createPath)("replyGroundhog", '重玩"土拨鼠"', y),
+        g = (0, n.createNode)("event_progressgroundhog_prestige", "我们重新开始吧!", null, p),
+        b = (0, n.createPath)("progressreplyGroundhog", '重玩"土拨鼠"', g),
+        M = (0, n.createUserChoiceNode)("progressgroundhoggingRoot", "'重玩\"土拨鼠\"再试一次.'", [b]),
+        k = (0, n.createNode)("event_progressgroundhog2", "但外星人的舰队很庞大,而你的年纪也老迈了.当你的进度放慢时重新开始吧.", M),
+        w = (0, n.createNode)("event_progressgroundhog1", "你正在进步中!", k),
+        x = (0, n.createUserChoiceNode)("groundhoggingRoot", "你的手机收到一条消息: '他们来了.重玩\"土拨鼠\"来再试一次.'", [_]),
+        P = (0, n.createNode)("event_groundhog2", "每一天似乎都比前一天持续的时间长.", x),
         L = (0,
-            n.createNode)("event_groundhog1", "Something feels wrong...", P, m),
+            n.createNode)("event_groundhog1", "有什么东西不对劲...", P, m),
         C = function () {
             return f.battle.state.enemyReachedSolarSystem ? 0 : 1
         },
         S = (0, n.createAutoChoiceNode)("event_gh_ano", "...", C, [L, w]),
         A = [S, L, P, x, w, k, M, g, y],
-        T = t.groundHogging = (0, n.createEvent)("groundhogging", "Groundhog", A),
+        T = t.groundHogging = (0, n.createEvent)("groundhogging", "土拨鼠", A),
         E = function () {
             return f.battle.state.enemyReachedSolarSystem || o.currentYear.getValue() > 43 || v.DEVMODE
         };
