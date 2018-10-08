@@ -90,7 +90,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
             key: "update",
             value: function () {
                 var e = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-                if (this._entityUpdated += 1, this.logUnlock ? (this.locks.update(), this.wasLocked && this.unlocked() && f.messageBox.addMessage(this.name + " unlocked!", "unlocked")) : this.locks.update(), this.wasLocked = !this.unlocked(), e) {
+                if (this._entityUpdated += 1, this.logUnlock ? (this.locks.update(), this.wasLocked && this.unlocked() && f.messageBox.addMessage(this.name + " 已解锁!", "unlocked")) : this.locks.update(), this.wasLocked = !this.unlocked(), e) {
                     var t = !0,
                         a = !1,
                         n = void 0;
@@ -284,7 +284,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
             var a = function () {
                 return e.unlocked()
             };
-            t.locks.addLock(new c(e.name + " is unlocked", a, [e])), e.subscribe(t)
+            t.locks.addLock(new c(e.name + " 已解锁", a, [e])), e.subscribe(t)
         }, t.createCustomLock = function (e, t, a) {
             var n = "Custom Lock: " + t.id,
                 i = !0,
@@ -1314,7 +1314,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
             }, {
                 key: "setCurrentJob",
                 value: function (e) {
-                    e !== this.job && (this.job && this.job.deactivate(), this.job = e, this.job.activate(), g.setCurrentIncome(e.income), y.log.info("You got a new job: " + this.job.name, this.id, y.log.JOBSELECTED), (0, v.default)(t.prototype.__proto__ || (0, r.default)(t.prototype), "update", this).call(this))
+                    e !== this.job && (this.job && this.job.deactivate(), this.job = e, this.job.activate(), g.setCurrentIncome(e.income), y.log.info("你得到了一份新工作: " + this.job.name, this.id, y.log.JOBSELECTED), (0, v.default)(t.prototype.__proto__ || (0, r.default)(t.prototype), "update", this).call(this))
                 }
             }]), t
         }(m.BasicEntity);
@@ -2138,7 +2138,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
                     }
                 }
                 e.state.selected = !0, V.update(), e.update(), b.eat.duration.update(), V = e
-            } else w.messageBox.addMessage("Not enough free time! Need " + (0, x.formatMinutes)(t) + ".")
+            } else w.messageBox.addMessage("没有足够的空闲时间! 需要 " + (0, x.formatMinutes)(t) + ".")
         }
 }, , , , , function (e, t, a) {
     "use strict";
@@ -2575,7 +2575,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
         _ = function (e) {
             function t() {
                 (0, o.default)(this, t);
-                var e = (0, d.default)(this, (t.__proto__ || (0, r.default)(t)).call(this, "currentResearchContainer", "Current Research Container", {}));
+                var e = (0, d.default)(this, (t.__proto__ || (0, r.default)(t)).call(this, "currentResearchContainer", "当前研究容器", {}));
                 return e.area = null, e
             }
             return (0, p.default)(t, e), (0, l.default)(t, [{
@@ -2586,7 +2586,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
             }, {
                 key: "setCurrentResearch",
                 value: function (e) {
-                    e !== this.area && (this.area && this.area.deactivate(), this.area = e, y.log.info("Researching " + this.area.name, this.name, y.log.RESEARCH_SELECTED), this.area.activate(), (0, v.default)(t.prototype.__proto__ || (0, r.default)(t.prototype), "update", this).call(this))
+                    e !== this.area && (this.area && this.area.deactivate(), this.area = e, y.log.info("研究 " + this.area.name, this.name, y.log.RESEARCH_SELECTED), this.area.activate(), (0, v.default)(t.prototype.__proto__ || (0, r.default)(t.prototype), "update", this).call(this))
                 }
             }]), t
         }(m.BasicEntity);
@@ -3912,12 +3912,12 @@ webpackJsonp([1, 0], [function (e, t, a) {
                 value: function () {
                     var e = 100 * g.step,
                         t = e > .01 ? e.toFixed(2) : "<0.01";
-                    _.effect = "利息 +" + t + "% (累计: " + (100 * g.factor).toFixed(2) + "%/yr)"
+                    _.effect = "利率 +" + t + "% (累计: " + (100 * g.factor).toFixed(2) + "%/年)"
                 }
             }]), t
         }(y.BasicEntity),
-        k = new M("inv_eff_upd", "Investment Effect Updater", new b);
-    g.subscribe(k), _.effect = "Interest +1%"
+        k = new M("inv_eff_upd", "投资效果更新", new b);
+    g.subscribe(k), _.effect = "收入 +1%"
 }, function (e, t, a) {
     "use strict";
     Object.defineProperty(t, "__esModule", {
@@ -8432,7 +8432,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
             var e = this,
                 t = e.$createElement,
                 a = e._self._c || t;
-            return a("div", [a("h5", [e._v("Previous Life")]), e._v("\n  The highest levels reached in previous lives."), a("br"), e._v("\n  Reaching higher levels increases your progress speed in future lives."), a("br"), a("br"), e._v(" "), a("h3", [e._v("Career")]), e._v(" "), e._l(e.careers, function (t) {
+            return a("div", [a("h5", [e._v("上个轮回")]), e._v("\n  在前世中达到的最高等级."), a("br"), e._v("\n  达到更高的等级会加速你在未来的进度."), a("br"), a("br"), e._v(" "), a("h3", [e._v("生涯")]), e._v(" "), e._l(e.careers, function (t) {
                 return t.jobs[0].xp.state.highestLevelEver > 0 ? a("div", {}, [a("div", {
                     staticClass: "row"
                 }, [a("h5", [e._v(e._s(t.name))]), a("br")]), e._v(" "), a("table", [e._m(0, !0), e._v(" "), e._l(t.jobs, function (t) {
@@ -8440,7 +8440,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
                         class: t.xp.recordClass()
                     }, [a("td", [e._v(e._s(t.name))]), e._v(" "), a("td", [e._v(e._s(t.xp.previousLevelReached()))]), e._v(" "), a("td", [e._v(e._s(t.xp.state.highestLevelThisLoop))]), e._v(" "), a("td", [e._v(e._s(t.xp.computePrestigeFactor()))])]) : e._e()
                 })], 2), e._v(" "), a("br")]) : e._e()
-            }), e._v(" "), a("br"), e._v(" "), a("h3", [e._v("Research")]), e._v(" "), e._l(e.fields, function (t) {
+            }), e._v(" "), a("br"), e._v(" "), a("h3", [e._v("研究")]), e._v(" "), e._l(e.fields, function (t) {
                 return a("div", [a("div", {
                     staticClass: "row"
                 }, [a("h5", [e._v(e._s(t.name))])]), e._v(" "), a("table", [e._m(1, !0), e._v(" "), e._l(t.areas, function (t) {
@@ -8458,19 +8458,19 @@ webpackJsonp([1, 0], [function (e, t, a) {
                 staticStyle: {
                     width: "15rem"
                 }
-            }, [e._v("Title")]), e._v(" "), a("th", {
+            }, [e._v("标题")]), e._v(" "), a("th", {
                 staticStyle: {
                     width: "10rem"
                 }
-            }, [e._v("Level reached")]), e._v(" "), a("th", {
+            }, [e._v("达到等级")]), e._v(" "), a("th", {
                 staticStyle: {
                     width: "10rem"
                 }
-            }, [e._v("Highest Level This Loop")]), e._v(" "), a("th", {
+            }, [e._v("所有循环最高等级")]), e._v(" "), a("th", {
                 staticStyle: {
                     width: "10rem"
                 }
-            }, [e._v("Speedup-Factor")])])
+            }, [e._v("加速系数")])])
         }, function () {
             var e = this,
                 t = e.$createElement,
@@ -8479,19 +8479,19 @@ webpackJsonp([1, 0], [function (e, t, a) {
                 staticStyle: {
                     width: "15rem"
                 }
-            }, [e._v("Area")]), e._v(" "), a("th", {
+            }, [e._v("领域")]), e._v(" "), a("th", {
                 staticStyle: {
                     width: "10rem"
                 }
-            }, [e._v("Level reached")]), e._v(" "), a("th", {
+            }, [e._v("达到等级")]), e._v(" "), a("th", {
                 staticStyle: {
                     width: "10rem"
                 }
-            }, [e._v("Highest Level This Loop")]), e._v(" "), a("th", {
+            }, [e._v("所有循环最高等级")]), e._v(" "), a("th", {
                 staticStyle: {
                     width: "10rem"
                 }
-            }, [e._v("Speedup-Factor")])])
+            }, [e._v("加速系数")])])
         }]
     }
 }, function (e, t) {
