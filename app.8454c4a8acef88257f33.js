@@ -1145,7 +1145,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
             (0, p.default)(this, t);
             var i = (0, l.default)(this, (t.__proto__ || (0, r.default)(t)).call(this, e, a, new k));
             i.name = a, i.subjects = n;
-            var s = (0, _.createResearchXpPerHourStat)(i.id + "_xp_per_hour", i.name + " XP/h");
+            var s = (0, _.createResearchXpPerHourStat)(i.id + "_xp_per_hour", i.name + " 经验/小时");
             return i.xp = new y.XPModule(i.id + "experience", i.name + " experience", s), i.xp.nextLevelAtXp = (0, y.linearExponentialXpIncrease)(100), i.effect = "", i.logUnlock = !0, i.importance = 1, i
         }
         return (0, v.default)(t, e), (0, o.default)(t, [{
@@ -1349,13 +1349,13 @@ webpackJsonp([1, 0], [function (e, t, a) {
             }
             return (0, d.default)(t, e), t
         }(f.Stat),
-        m = t.baseWorkXpPerHourStat = new f.Stat("baseWorkXpPerHourStat", "基础工作经验", 1, 2, "", "/h");
+        m = t.baseWorkXpPerHourStat = new f.Stat("baseWorkXpPerHourStat", "基础工作经验", 1, 2, "", "/小时");
     m.addModifier(v.standardEnergyModifier);
     var y = (t.createWorkXpPerHourStat = function (e, t) {
         var a = new p(e, t),
             n = new h.StatEffectiveAddModifier(a.id + "_base", "基础工作经验", 1, m);
         return a.addModifier(n), a
-    }, t.baseResearchXpPerHourStat = new f.Stat("baseResearchXpPerHourStat", "基础研究经验", 1, 2, "", "/h"));
+    }, t.baseResearchXpPerHourStat = new f.Stat("baseResearchXpPerHourStat", "基础研究经验", 1, 2, "", "/小时"));
     y.addModifier(v.standardEnergyModifier);
     t.createResearchXpPerHourStat = function (e, t) {
         var a = new p(e, t),
@@ -5666,7 +5666,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
     t.IncomePerWorkHourStat = function (e) {
         function t(e, a) {
             (0, o.default)(this, t);
-            var n = (0, l.default)(this, (t.__proto__ || (0, r.default)(t)).call(this, e.id + "incpH", "Income/h", a, 2, "$", ""));
+            var n = (0, l.default)(this, (t.__proto__ || (0, r.default)(t)).call(this, e.id + "incpH", "收入/小时", a, 2, "$", ""));
             return n.job = e, n.base = a, n.addModifier(new v.JobLevelModifier(e)), n.update(), n
         }
         return (0, d.default)(t, e), t
