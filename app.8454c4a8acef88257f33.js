@@ -7840,7 +7840,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
                         e.settings.xpPerHour.toggleValue()
                     }
                 }
-            }, [e._v("\n      " + e._s(e.settings.xpPerHour.getValue() ? "XP/h" : "XP/day") + "\n    ")]), e._v(" "), a("span", {
+            }, [e._v("\n      " + e._s(e.settings.xpPerHour.getValue() ? "经验/小时": "经验/天") + "\n    ")]), e._v(" "), a("span", {
                 staticStyle: {
                     "padding-left": "20px"
                 }
@@ -8871,23 +8871,23 @@ webpackJsonp([1, 0], [function (e, t, a) {
                 staticStyle: {
                     width: "15rem"
                 }
-            }, [e._v("Title")]), e._v(" "), a("th", {
+            }, [e._v("标题")]), e._v(" "), a("th", {
                 staticStyle: {
                     width: "10rem"
                 }
-            }, [e._v("Highest Level reached")]), e._v(" "), a("th", {
+            }, [e._v("最高等级")]), e._v(" "), a("th", {
                 staticStyle: {
                     width: "10rem"
                 }
-            }, [e._v("Groundhog Factor")]), e._v(" "), a("th", {
+            }, [e._v("游戏系数")]), e._v(" "), a("th", {
                 staticStyle: {
                     width: "10rem"
                 }
-            }, [e._v("Current Looptrap Speedup")]), e._v(" "), a("th", {
+            }, [e._v("当前循环诱捕加速")]), e._v(" "), a("th", {
                 staticStyle: {
                     width: "10rem"
                 }
-            }, [e._v("After Loop Trap")])])
+            }, [e._v("循环诱捕之后")])])
         }]
     }
 }, function (e, t) {
@@ -8902,7 +8902,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
             var e = this,
                 t = e.$createElement,
                 a = e._self._c || t;
-            return a("div", [a("h3", [e._v("Privacy Policy")]), e._v("\n        We do not collect or store any of your personal information."), a("br"), e._v("\n        Save data is stored locally in your local browser cache."), a("br")])
+            return a("div", [a("h3", [e._v("隐私权政策")]), e._v("\n        我们不收集或储存您的任何个人资料."), a("br"), e._v("\n        游戏存档保存在你本地浏览器的本地存储里面。"), a("br")])
         }]
     }
 }, function (e, t) {
@@ -8931,14 +8931,14 @@ webpackJsonp([1, 0], [function (e, t, a) {
                 }, [a(t.component, {
                     tag: "div"
                 })]) : e._e()
-            }))], 1)]) : a("div", [e._v("\n    As an adult, you have the right, and the duty, to make major lifestyle choices."), a("br"), e._v(" "), a("button", {
+            }))], 1)]) : a("div", [e._v("\n    作为一个成年人,你有权利和义务为你主要的生活方式做出选择."), a("br"), e._v(" "), a("button", {
                 staticClass: "btn btn-success",
                 on: {
                     click: function (t) {
                         e.lifestylePane.state.explained = !0
                     }
                 }
-            }, [e._v("Make Major Lifestyle Choices")])])])
+            }, [e._v("选择主要的生活方式")])])])
         },
         staticRenderFns: []
     }
@@ -8964,11 +8964,11 @@ webpackJsonp([1, 0], [function (e, t, a) {
                         e.autoPromote.toggleValue()
                     }
                 }
-            }, [a("small", [e._v("自动提升状态: " + e._s(e.autoPromote.select("On", "Off")))])]), e._v(" "), e.userInventory.haveAutoPromote ? a("span", [a("label", {
+            }, [a("small", [e._v("自动晋升已: " + e._s(e.autoPromote.select("开启", "关闭")))])]), e._v(" "), e.userInventory.haveAutoPromote ? a("span", [a("label", {
                 attrs: {
                     for: "apml"
                 }
-            }, [e._v("Min Lvl:")]), e._v(" "), a("input", {
+            }, [e._v("最低等级:")]), e._v(" "), a("input", {
                 directives: [{
                     name: "model",
                     rawName: "v-model.number",
@@ -9026,7 +9026,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
                 attrs: {
                     for: "apjp"
                 }
-            }, [e._v("如果推广可用则暂停")])]) : a("a", {
+            }, [e._v("如果可晋升自动暂停")])]) : a("a", {
                 attrs: {
                     href: "#"
                 },
@@ -9035,7 +9035,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
                         e.selectPane(e.groundhogMarketPane)
                     }
                 }
-            }, [a("small", [e._v("Unlock")])])])], 1), e._v(" "), a("div", {
+            }, [a("small", [e._v("解锁")])])])], 1), e._v(" "), a("div", {
                 staticClass: "row"
             }, [a("table", [a("tr", [a("th", {
                 staticStyle: {
@@ -9082,12 +9082,12 @@ webpackJsonp([1, 0], [function (e, t, a) {
                     }
                 }, [a("span", {
                     staticClass: "collapse-icon rounded-circle"
-                }, [e._v(e._s(t.state.selected ? "-" : "+"))]), a("b", [e._v(e._s(t.career.name))])]), e._v(" "), a("td", [e._v("Level")]), e._v(" "), a("td", [e._v("Income/h")]), e._v(" "), a("td", [e._v("XP Left")]), e._v(" "), a("td", [e._v(e._s(e.settings.xpPerHour.getValue() ? "XP/h" : "XP/day"))]), e._v(" "), e.time.currentLifeThisLoop.getValue() > 1 ? a("td", {
+                }, [e._v(e._s(t.state.selected ? "-" : "+"))]), a("b", [e._v(e._s(t.career.name))])]), e._v(" "), a("td", [e._v("等级")]), e._v(" "), a("td", [e._v("收入/小时")]), e._v(" "), a("td", [e._v("剩余经验")]), e._v(" "), a("td", [e._v(e._s(e.settings.xpPerHour.getValue() ? "经验/小时": "经验/天"))]), e._v(" "), e.time.currentLifeThisLoop.getValue() > 1 ? a("td", {
                     staticClass: "text-right",
                     staticStyle: {
                         width: "3rem"
                     }
-                }, [e._v("Max Lvl")]) : e._e()]) : a("tr", {
+                }, [e._v("最高等级")]) : e._e()]) : a("tr", {
                     staticClass: "tr-name"
                 }, [a("td", {
                     staticClass: "tr-name",
@@ -9110,7 +9110,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
                         attrs: {
                             colspan: "6"
                         }
-                    }, [e._v("\n            Required: "), a("i", [e._v(e._s(n.locks.lockString()))])])]) : e._e()
+                    }, [e._v("\n            需求: "), a("i", [e._v(e._s(n.locks.lockString()))])])]) : e._e()
                 }), e._v(" "), e._m(0, !0)], 2) : e._e()
             })], 2)]), e._v(" "), a("div", {
                 staticClass: "row",
@@ -9124,7 +9124,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
                         e.settings.xpPerHour.toggleValue()
                     }
                 }
-            }, [e._v("\n      " + e._s(e.settings.xpPerHour.getValue() ? "XP/h" : "XP/day") + "\n    ")]), e._v(" "), a("span", {
+            }, [e._v("\n      " + e._s(e.settings.xpPerHour.getValue() ? "经验/小时": "经验/天") + "\n    ")]), e._v(" "), a("span", {
                 staticStyle: {
                     "padding-left": "20px"
                 }
@@ -9155,7 +9155,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
                 attrs: {
                     for: "pause"
                 }
-            }, [e._v("Pause/Continue")]), e._v(" "), a("input", {
+            }, [e._v("暂停/继续")]), e._v(" "), a("input", {
                 directives: [{
                     name: "model",
                     rawName: "v-model",
@@ -9180,7 +9180,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
                 attrs: {
                     for: "boosts"
                 }
-            }, [e._v("Activate all Boosts")]), e._v(" "), a("input", {
+            }, [e._v("激活所有提神")]), e._v(" "), a("input", {
                 directives: [{
                     name: "model",
                     rawName: "v-model",
@@ -9205,7 +9205,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
                 attrs: {
                     for: "speedup"
                 }
-            }, [e._v("Fast Forward")]), e._v(" "), a("input", {
+            }, [e._v("快进")]), e._v(" "), a("input", {
                 directives: [{
                     name: "model",
                     rawName: "v-model",
@@ -9288,7 +9288,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
                 a = e._self._c || t;
             return a("div", [a("div", {
                 staticClass: "row"
-            }, [a("br"), e._v(" "), a("span", [e._v("\n      You got " + e._s(e.completedAchievements) + " achievements.\n      ")]), a("br")]), e._v(" "), a("div", {
+            }, [a("br"), e._v(" "), a("span", [e._v("\n      你获得了 " + e._s(e.completedAchievements) + " 成就。\n      ")]), a("br")]), e._v(" "), a("div", {
                 staticClass: "row"
             }, [a("table", [e._m(0), e._v(" "), e._l(e.achievementPane.subpanes, function (t) {
                 return a("tbody", {
@@ -9326,7 +9326,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
                         }
                     }), e._v(" "), a("td", [e._v(e._s(e.abbreviateNumber(n.currentValue)) + "/" + e._s(e.abbreviateNumber(n.goal)))])]) : e._e()
                 }), e._v(" "), e._m(1, !0)], 2)
-            })], 2), e._v("\n    * Pride and Lust TBD.\n  ")])])
+            })], 2), e._v("\n    * 骄傲和欲望。\n  ")])])
         },
         staticRenderFns: [function () {
             var e = this,
@@ -9394,7 +9394,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
                 staticClass: "modal-title"
             }, [e._v(e._s(e.stat.name))]), e._v(" "), a("table", [e._m(0), e._v(" "), a("tr", [a("td", {
                 staticClass: "text-left"
-            }, [e._v(" Base Value ")]), e._v(" "), a("td"), e._v(" "), a("td", {
+            }, [e._v(" 基础数值 ")]), e._v(" "), a("td"), e._v(" "), a("td", {
                 staticClass: "text-right"
             }, [e._v(e._s(e.stat.prefix + e.stat.base.toFixed(e.stat.digits) + e.stat.suffix))])]), e._v(" "), e._l(e.stat.modifiersWithValues(), function (t) {
                 return t[0].unlocked() ? a("tr", [a("td", {
@@ -9408,7 +9408,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
                 }, [e._v(" " + e._s(t[0].operationString + t[0].factor.toFixed(t[0].digits)) + " ")]), e._v(" "), a("td", {
                     staticClass: "text-right"
                 }, [e._v(" " + e._s(e.stat.prefix + t[1].toFixed(e.stat.digits) + e.stat.suffix))])]) : e._e()
-            }), e._v(" "), a("tr", [a("td", [e._v(" Effective Value ")]), e._v(" "), a("td"), e._v(" "), a("td", {
+            }), e._v(" "), a("tr", [a("td", [e._v(" 最终数值 ")]), e._v(" "), a("td"), e._v(" "), a("td", {
                 staticClass: "text-right"
             }, [a("b", [e._v(e._s(e.stat.prefix + e.stat.effective.toFixed(e.stat.digits) + e.stat.suffix))])])])], 2)])])])])], 1)
         },
@@ -9416,7 +9416,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
             var e = this,
                 t = e.$createElement,
                 a = e._self._c || t;
-            return a("tr", [a("th", [e._v("Modifier")]), a("th", [e._v("Factor")]), a("th", [e._v("Value")])])
+            return a("tr", [a("th", [e._v("项目")]), a("th", [e._v("系数")]), a("th", [e._v("数值")])])
         }]
     }
 }, function (e, t) {
@@ -9425,7 +9425,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
             var e = this,
                 t = e.$createElement,
                 a = e._self._c || t;
-            return a("div", [a("h5", [e._v("Gameplay")]), e._v(" "), a("input", {
+            return a("div", [a("h5", [e._v("游戏选项")]), e._v(" "), a("input", {
                 directives: [{
                     name: "model",
                     rawName: "v-model",
@@ -9455,7 +9455,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
                 attrs: {
                     for: "checkbox-pauseOnPrestige"
                 }
-            }, [e._v("Auto-Pause when starting a new life")]), e._v(" "), a("br"), e._v(" "), a("button", {
+            }, [e._v("开始一次新的生活时将自动暂停")]), e._v(" "), a("br"), e._v(" "), a("button", {
                 staticClass: "btn",
                 attrs: {
                     role: "button"
@@ -9465,7 +9465,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
                         e.toggleNightMode()
                     }
                 }
-            }, [e._v("Toggle Night Mode")]), e._v(" "), a("br"), e._v(" "), a("h5", [e._v("Import/Export Savegame")]), e._v(" "), a("br"), e._v(" "), a("small", [e._v("Note: imports from pre-kongregate versions of this game are not officially supported, but feel free to try")]), a("br"), e._v(" "), a("button", {
+            }, [e._v("切换夜间模式")]), e._v(" "), a("br"), e._v(" "), a("h5", [e._v("导入/导出游戏存档")]), e._v(" "), a("br"), e._v(" "), a("small", [e._v("注意:之前从K站版本导出的存档已不再支持,但你可以试试")]), a("br"), e._v(" "), a("button", {
                 staticClass: "btn",
                 attrs: {
                     role: "button"
@@ -9475,7 +9475,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
                         e.exportSaveHelper()
                     }
                 }
-            }, [e._v("Export")]), e._v(" "), a("button", {
+            }, [e._v("导出")]), e._v(" "), a("button", {
                 staticClass: "btn",
                 attrs: {
                     role: "button"
@@ -9485,14 +9485,14 @@ webpackJsonp([1, 0], [function (e, t, a) {
                         e.importSaveHelper()
                     }
                 }
-            }, [e._v("Import")]), e._v(" "), a("br"), e._v(" "), a("textarea", {
+            }, [e._v("导入")]), e._v(" "), a("br"), e._v(" "), a("textarea", {
                 ref: "savegamearea",
                 attrs: {
                     onclick: "this.select()",
                     rows: "10",
                     cols: "50"
                 }
-            }), e._v(" "), a("br"), e._v(" "), a("br"), e._v(" "), a("br"), e._v(" "), a("br"), e._v(" "), a("h1", [e._v("WARNING! THE FOLLOWING BUTTON WILL DELETE YOUR PROGRESS!")]), e._v(" "), a("button", {
+            }), e._v(" "), a("br"), e._v(" "), a("br"), e._v(" "), a("br"), e._v(" "), a("br"), e._v(" "), a("h1", [e._v("警告!下面的按钮会删除你所有的进度!(除了超光速粒子和市场项目,这是关联到您的帐户的)")]), e._v(" "), a("button", {
                 staticClass: "btn",
                 attrs: {
                     role: "button"
@@ -9502,7 +9502,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
                         e.hardReset()
                     }
                 }
-            }, [e._v("Hard Reset")])])
+            }, [e._v("彻底重置游戏")])])
         },
         staticRenderFns: []
     }
@@ -9587,7 +9587,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
                         e.autoBoost.toggleValue()
                     }
                 }
-            }, [a("small", [e._v("Auto-Boost is " + e._s(e.autoBoost.select("On", "Off")))])]), e._v(" "), e.userInventory.haveAutoBoost ? a("span", [a("input", {
+            }, [a("small", [e._v("自动提神已 " + e._s(e.autoBoost.select("开启", "关闭")))])]), e._v(" "), e.userInventory.haveAutoBoost ? a("span", [a("input", {
                 directives: [{
                     name: "model",
                     rawName: "v-model",
@@ -9617,7 +9617,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
                 attrs: {
                     for: "abs"
                 }
-            }, [e._v("Stack")]), e._v(" "), a("input", {
+            }, [e._v("叠加")]), e._v(" "), a("input", {
                 directives: [{
                     name: "model",
                     rawName: "v-model.number",
@@ -9650,7 +9650,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
                 attrs: {
                     for: "excl-conf"
                 }
-            }, [e._v("Wait for Conference")]), e._v(" "), a("input", {
+            }, [e._v("等待盟会")]), e._v(" "), a("input", {
                 directives: [{
                     name: "model",
                     rawName: "v-model",
@@ -9680,7 +9680,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
                 attrs: {
                     for: "abjp"
                 }
-            }, [e._v("Pause if ready")])]) : a("a", {
+            }, [e._v("如果准备好就暂停y")])]) : a("a", {
                 attrs: {
                     href: "#"
                 },
@@ -9689,7 +9689,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
                         e.selectPane(e.groundhogMarketPane)
                     }
                 }
-            }, [a("small", [e._v("Unlock")])])])], 1), e._v(" "), e._m(0), e._v(" "), a("div", {
+            }, [a("small", [e._v("解锁")])])])], 1), e._v(" "), e._m(0), e._v(" "), a("div", {
                 staticClass: "row"
             }, [a("table", [e._m(1), e._v(" "), e._l(e.boosts, function (t) {
                 return t.unlocked() ? a("tr", [a("td", [a("button", {
@@ -9713,7 +9713,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
                     attrs: {
                         colspan: "4"
                     }
-                }, [e._v("\n        Requires: " + e._s(t.locks.lockString()) + "\n        ")])])
+                }, [e._v("\n        需求: " + e._s(t.locks.lockString()) + "\n        ")])])
             })], 2)]), e._v(" "), a("assistants-display")], 1)
         },
         staticRenderFns: [function () {
@@ -9722,7 +9722,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
                 a = e._self._c || t;
             return a("div", {
                 staticClass: "row"
-            }, [a("h5", [e._v("Boosts")])])
+            }, [a("h5", [e._v("提神")])])
         }, function () {
             var e = this,
                 t = e.$createElement,
@@ -9736,15 +9736,15 @@ webpackJsonp([1, 0], [function (e, t, a) {
                     width: "15rem",
                     "padding-left": "20px"
                 }
-            }, [e._v("Effect")]), e._v(" "), a("th", {
+            }, [e._v("效果")]), e._v(" "), a("th", {
                 staticStyle: {
                     width: "6rem"
                 }
-            }, [e._v("Days Left")]), e._v(" "), a("th", {
+            }, [e._v("剩余天数")]), e._v(" "), a("th", {
                 staticStyle: {
                     width: "3rem"
                 }
-            }, [e._v("Cooldown")])])
+            }, [e._v("冷却")])])
         }]
     }
 }, function (e, t) {
@@ -9769,7 +9769,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
                         e.autoResearch.toggleValue()
                     }
                 }
-            }, [a("small", [e._v("Auto-Research is " + e._s(e.autoResearch.select("On", "Off")))])]), e._v(" "), e.userInventory.haveAutoResearch ? a("span", [a("input", {
+            }, [a("small", [e._v("自动研究已 " + e._s(e.autoResearch.select("开启", "关闭")))])]), e._v(" "), e.userInventory.haveAutoResearch ? a("span", [a("input", {
                 directives: [{
                     name: "model",
                     rawName: "v-model",
@@ -9808,7 +9808,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
                         e.selectPane(e.groundhogMarketPane)
                     }
                 }
-            }, [a("small", [e._v("Unlock")])])])], 1), e._v(" "), a("div", {
+            }, [a("small", [e._v("解锁")])])])], 1), e._v(" "), a("div", {
                 staticClass: "row"
             }, [a("table", [e._m(0), e._v(" "), a("tr", [a("td"), e._v(" "), a("td", [a("div", {
                 staticClass: "dropdown"
@@ -9821,7 +9821,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
                     "aria-haspopup": "true",
                     "aria-expanded": "false"
                 }
-            }, [e._v("\n              Add Area\n            ")]), e._v(" "), a("div", {
+            }, [e._v("\n              添加领域\n            ")]), e._v(" "), a("div", {
                 staticClass: "dropdown-menu",
                 attrs: {
                     "aria-labelledby": "dropdownMenuButton"
@@ -9835,7 +9835,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
                         }
                     }
                 }, [e._v(e._s(t.name))]) : e._e()
-            }))])]), e._v(" "), a("td", [e._v("Target Level")]), e._v(" "), a("td"), e._v(" "), a("td")]), e._v(" "), a("tbody", e._l(e.items, function (t, n) {
+            }))])]), e._v(" "), a("td", [e._v("目标等级")]), e._v(" "), a("td"), e._v(" "), a("td")]), e._v(" "), a("tbody", e._l(e.items, function (t, n) {
                 return a("tr", {
                     key: t.internalId
                 }, [a("td", [a("button", {
