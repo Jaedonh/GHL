@@ -1580,18 +1580,18 @@ webpackJsonp([1, 0], [function (e, t, a) {
         s = a(11),
         o = a(49),
         u = a(12),
-        l = t.dmScanner = new r.Area("area_dmScanner", "Dark Matter Scanning", []),
-        c = t.anomaly = new r.Area("area_investigateAnomaly", "Investigate Anomaly", []),
-        d = t.mirrorMatter = new r.Area("area_mirrorMatter", "Mirror Matter Theory", []),
-        f = t.demirrorAnomaly = new r.Area("area_demirror", "Unmirror Anomaly", []),
-        v = t.studyMirroredShip = new r.Area("area_studyMirroredShip", "Study Mirrored Ship", []),
-        h = t.laserGun = new r.Area("area_constructPowerPlant", "Laser Gun", []);
-    h.effect = "+10% Laser Gun Damage";
-    var p = t.loopTrapResearch = new r.Area("area_loopTrap", "Loop Trap Device", []);
-    p.effect = "Increases Loop Trap Device efficiency";
+        l = t.dmScanner = new r.Area("area_dmScanner", "暗物质扫描", []),
+        c = t.anomaly = new r.Area("area_investigateAnomaly", "调查异常现象", []),
+        d = t.mirrorMatter = new r.Area("area_mirrorMatter", "镜物质理论", []),
+        f = t.demirrorAnomaly = new r.Area("area_demirror", "解除镜像异常", []),
+        v = t.studyMirroredShip = new r.Area("area_studyMirroredShip", "研究镜像飞船", []),
+        h = t.laserGun = new r.Area("area_constructPowerPlant", "激光枪", []);
+    h.effect = "激光枪伤害 +10%";
+    var p = t.loopTrapResearch = new r.Area("area_loopTrap", "循环陷阱设备", []);
+    p.effect = "增加循环诱捕装置效率";
     for (var m = [i.qm, l, c, d, f, v, h, p], y = 1; y < m.length - 2; y++) {
-        var _ = new u.LevelAddMultModifier(m[y].id + "_level_mod", "Research: " + m[y].name, 2, m[y].xp, .01);
-        m[y + 1].xp.xpPerHourStat.addModifier(_), m[y].effect = "+1% " + m[y + 1].name + " Research", (0, s.createLevelLock)(m[y], m[y + 1], 50 * y)
+        var _ = new u.LevelAddMultModifier(m[y].id + "_level_mod", "研究: " + m[y].name, 2, m[y].xp, .01);
+        m[y + 1].xp.xpPerHourStat.addModifier(_), m[y].effect = "+1% " + m[y + 1].name + " 研究", (0, s.createLevelLock)(m[y], m[y + 1], 50 * y)
     }(0, s.createLevelLock)(o.lambdaComplexTrainee, l, 1), (0, s.createLevelLock)(v, p, 250), (0, s.createLevelLock)(o.darkPlateauCeo, h, 10), (0, s.createLevelLock)(o.darkPlateauCeo, p, 10);
     t.physics = new n.Field("physics", "物理学", m)
 }, function (e, t, a) {
@@ -1732,10 +1732,10 @@ webpackJsonp([1, 0], [function (e, t, a) {
             var i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : x(10);
             (0, p.default)(this, t);
             var s = (0, l.default)(this, (t.__proto__ || (0, r.default)(t)).call(this, e, a, new w));
-            s.xpPerHourStat = n, s.nextLevelAtXp = i, s.groundhogFactorStat = new P(s.id + "_groundhogFactorStat", "Groundhog Factor", s);
+            s.xpPerHourStat = n, s.nextLevelAtXp = i, s.groundhogFactorStat = new P(s.id + "_groundhogFactorStat", "土拨鼠因子", s);
             var o = new g.StatEffectiveMultModifier(s.id + "_groundhogFactorMod", "Groundhog Factor", 100, s.groundhogFactorStat);
             s.xpPerHourStat.addModifier(o);
-            var u = new g.GenericMultModifier(s.id + "_ltmod", "Loop Trap", 110, s, function (e) {
+            var u = new g.GenericMultModifier(s.id + "_ltmod", "循环陷阱", 110, s, function (e) {
                 return e.state.loopTrapMultiplier
             });
             s.xpPerHourStat.addModifier(u), s.xpPerDayStat = new _.Stat(s.id + "_xppday", s.name + " 经验/天", 0, 2);
@@ -3154,7 +3154,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
         p = function (e) {
             function t() {
                 (0, d.default)(this, t);
-                var e = (0, o.default)(this, (t.__proto__ || (0, r.default)(t)).call(this, "looptrap", "Loop Trap", new h));
+                var e = (0, o.default)(this, (t.__proto__ || (0, r.default)(t)).call(this, "looptrap", "循环陷阱", new h));
                 return e.efficiency = new v.Stat("lt_efficiency", "Efficiency", 0, 4), e
             }
             return (0, l.default)(t, e), t
@@ -3501,15 +3501,15 @@ webpackJsonp([1, 0], [function (e, t, a) {
         return i.currentLife.getValue() - 1
     }, 50);
     i.currentLife.subscribe(k);
-    var w = new n.Achievement("ach_loop1", "Loop while you loop", "Use Loop Trap device once", function () {
+    var w = new n.Achievement("ach_loop1", "Loop while you loop", "使用循环陷阱设备1次", function () {
         return i.currentLoop.getValue() - 1
     }, 1);
     i.currentLoop.subscribe(w);
-    var x = new n.Achievement("ach_loop2", "Quantum Samsara", "Use Loop Trap device ten times", function () {
+    var x = new n.Achievement("ach_loop2", "Quantum Samsara", "使用循环陷阱设备10次", function () {
         return i.currentLoop.getValue() - 1
     }, 10);
     i.currentLoop.subscribe(w);
-    var P = new n.Achievement("ach_loop3", "Loops all the way down!", "Use Loop Trap device twenty times", function () {
+    var P = new n.Achievement("ach_loop3", "Loops all the way down!", "使用循环陷阱设备20次", function () {
         return i.currentLoop.getValue() - 1
     }, 20);
     i.currentLoop.subscribe(w);
