@@ -6928,7 +6928,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
                 var m = "波次: " + this.battle.state.wave,
                     y = "",
                     _ = "";
-                t.font = "15px Arial", t.fillStyle = "white", t.fillRect(1, 1, t.measureText(m).width + 6, 22), o && (_ = (0, l.formatDays)(Math.floor(this.battle.state.target.earthDistance / this.battle.state.target.speed)), y = "HP: " + this.abbr(this.battle.state.target.health) + "/" + this.abbr(this.battle.state.target.maxHealth), t.fillRect(a - 140, 1, 139, 42), t.fillRect(1, n - 25, 100, 24)), t.fillStyle = "black", t.fillText(m, 5, 20), o && (t.fillText(_, a - 140, 20), t.fillText("until Arrival", a - 100, 40), t.fillText(y, 5, n - 10)), t.strokeStyle = "black", t.lineWidth = 1, t.strokeRect(0, 0, e.width, e.height)
+                t.font = "15px Arial", t.fillStyle = "white", t.fillRect(1, 1, t.measureText(m).width + 6, 22), o && (_ = (0, l.formatDays)(Math.floor(this.battle.state.target.earthDistance / this.battle.state.target.speed)), y = "生命: " + this.abbr(this.battle.state.target.health) + "/" + this.abbr(this.battle.state.target.maxHealth), t.fillRect(a - 140, 1, 139, 42), t.fillRect(1, n - 25, 100, 24)), t.fillStyle = "black", t.fillText(m, 5, 20), o && (t.fillText(_, a - 140, 20), t.fillText("后抵达", a - 100, 40), t.fillText(y, 5, n - 10)), t.strokeStyle = "black", t.lineWidth = 1, t.strokeRect(0, 0, e.width, e.height)
             }
         },
         watch: {
