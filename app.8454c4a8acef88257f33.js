@@ -3489,27 +3489,27 @@ webpackJsonp([1, 0], [function (e, t, a) {
         y = a(49),
         _ = a(42),
         g = t.achievements = [],
-        b = new n.Achievement("achievement_edge_of_retirement", "Edge of Retirement", "Start over once", function () {
+        b = new n.Achievement("achievement_edge_of_retirement", "即将退休", "重新开始1次", function () {
             return i.currentLife.getValue() - 1
         }, 1);
     i.currentLife.subscribe(b);
-    var M = new n.Achievement("achievement_samsara", "Samsara", "Start over ten times", function () {
+    var M = new n.Achievement("achievement_samsara", "轮回", "重新开始10次", function () {
         return i.currentLife.getValue() - 1
     }, 10);
     i.currentLife.subscribe(M);
-    var k = new n.Achievement("achievement_sideways8", "Sideways 8", "Start over fifty times", function () {
+    var k = new n.Achievement("achievement_sideways8", "侧卧8", "重新开始50次", function () {
         return i.currentLife.getValue() - 1
     }, 50);
     i.currentLife.subscribe(k);
-    var w = new n.Achievement("ach_loop1", "Loop while you loop", "使用循环陷阱设备1次", function () {
+    var w = new n.Achievement("ach_loop1", "循环时循环", "使用循环陷阱设备1次", function () {
         return i.currentLoop.getValue() - 1
     }, 1);
     i.currentLoop.subscribe(w);
-    var x = new n.Achievement("ach_loop2", "Quantum Samsara", "使用循环陷阱设备10次", function () {
+    var x = new n.Achievement("ach_loop2", "量子轮回", "使用循环陷阱设备10次", function () {
         return i.currentLoop.getValue() - 1
     }, 10);
     i.currentLoop.subscribe(w);
-    var P = new n.Achievement("ach_loop3", "Loops all the way down!", "使用循环陷阱设备20次", function () {
+    var P = new n.Achievement("ach_loop3", "一路绕下去!", "使用循环陷阱设备20次", function () {
         return i.currentLoop.getValue() - 1
     }, 20);
     i.currentLoop.subscribe(w);
@@ -3519,121 +3519,121 @@ webpackJsonp([1, 0], [function (e, t, a) {
         return m.keep.state.countSelected
     }, 1);
     m.keep.subscribe(C);
-    var S = new n.Achievement("ach_gluttony", "Gluttony", "Hire Molecular Cooking Crew for a year", function () {
+    var S = new n.Achievement("ach_gluttony", "暴食", "雇佣一年分子料理厨师", function () {
         return v.molecularCooking.state.daysActive
     }, 365);
     v.molecularCooking.subscribe(S);
-    var A = new n.Achievement("ach_greed", "Greed", "Investment Research Level 500", function () {
+    var A = new n.Achievement("ach_greed", "贪婪", "投资研究达到500级", function () {
         return c.investment.xp.highestLevelEverIncludingThisLife()
     }, 500);
     c.investment.xp.subscribe(A);
-    var T = new n.Achievement("ach_sloth", "Sloth", "Sleep for 22 Hours", function () {
+    var T = new n.Achievement("ach_sloth", "懒惰", "睡上22个小时", function () {
         return h.sleep.duration.state.highestEffectiveEver / 60
     }, 22);
     h.sleep.duration.subscribe(T);
-    var E = new n.Achievement("ach_wrath", "Wrath", "Destroy 1000 Alien Ships", function () {
+    var E = new n.Achievement("ach_wrath", "愤怒", "摧毁1000艘外星飞船", function () {
         return p.battle.state.enemiesDestroyedTotal
     }, 1e3);
     p.battle.subscribe(E);
-    var I = new n.AG("ag_seven_deadly_sins", "Seven Deadly Sins*", [C, S, A, T, E]);
+    var I = new n.AG("ag_seven_deadly_sins", "七宗罪*", [C, S, A, T, E]);
     g.push(I);
-    var D = new n.Achievement("achievement_millionaire", "Millionaire", "Have a million dollars", function () {
+    var D = new n.Achievement("achievement_millionaire", "百万富翁", "拥有一百万", function () {
         return f.money.state.maximum
     }, 1e6);
     f.money.subscribe(D);
-    var j = new n.Achievement("achievement_billionaire", "Billionaire", "Have a billion dollars", function () {
+    var j = new n.Achievement("achievement_billionaire", "亿万富翁", "拥有十亿", function () {
         return f.money.state.maximum
     }, 1e9);
     f.money.subscribe(j);
-    var N = new n.Achievement("achievement_trillionaire", "Rockefeller", "Have a trillion dollars", function () {
+    var N = new n.Achievement("achievement_trillionaire", "洛克菲勒", "拥有一万亿", function () {
         return f.money.state.maximum
     }, 1e12);
     f.money.subscribe(N);
-    var O = new n.AG("ag_money", "Money", [D, j, N]);
+    var O = new n.AG("ag_money", "金钱", [D, j, N]);
     g.push(O);
-    var B = new n.Achievement("achievement_flippin_faster", "Flippin' Faster", "Level 10 Burger Flipper in less than 100 days", function () {
+    var B = new n.Achievement("achievement_flippin_faster", "快速制作", "在100天内升到10级汉堡服务员", function () {
         return r.burgerFlipper.xp.getMinDaysToLevel(10)
     }, 100, function (e, t) {
         return e <= t
     });
     r.burgerFlipper.xp.subscribe(B);
-    var R = new n.Achievement("achievement_flippin_fantastic", "Flippin' Fantastic", "Level 100 Burger Flipping", function () {
+    var R = new n.Achievement("achievement_flippin_fantastic", "奇妙制作", "升到100级汉堡服务员", function () {
         return r.burgerFlipper.xp.highestLevelEverIncludingThisLife()
     }, 100);
     r.burgerFlipper.xp.subscribe(R);
-    var G = new n.Achievement("achievement_flipping_livetimes", "Zen of Flipping", "Level 1000 Burger Flipper", function () {
+    var G = new n.Achievement("achievement_flipping_livetimes", "禅的定义", "升到1000级汉堡服务员", function () {
         return r.burgerFlipper.xp.highestLevelEverIncludingThisLife()
     }, 1e3);
     r.burgerFlipper.xp.subscribe(G);
-    var V = new n.Achievement("achievement_burgerKing", "Burger King", "Become Bun Masters CEO", function () {
+    var V = new n.Achievement("achievement_burgerKing", "汉堡大王", "成为汉堡大王的总裁", function () {
         return r.bunMastersCeo.xp.highestLevelEverIncludingThisLife()
     }, 1);
     r.bunMastersCeo.xp.subscribe(V);
-    var z = new n.AG("ag_bunmasters", "Path of the Burgerflipper", [B, R, G, V]);
+    var z = new n.AG("ag_bunmasters", "汉堡大王之路", [B, R, G, V]);
     g.push(z);
-    var H = new n.Achievement("achievement_intern_master", "Master Intern", "Level 100 Unpaid Intern", function () {
+    var H = new n.Achievement("achievement_intern_master", "硕士实习生", "升到100级无薪实习生", function () {
         return s.yugle.jobs[0].xp.highestLevelEverIncludingThisLife()
     }, 100);
     s.yugle.jobs[0].xp.subscribe(H);
-    var F = new n.Achievement("achievement_butwhy", "But Why?", "Level 1000 Unpaid Intern", function () {
+    var F = new n.Achievement("achievement_butwhy", "买什么?", "升到1000级无薪实习生", function () {
         return s.yugle.jobs[0].xp.highestLevelEverIncludingThisLife()
     }, 1e3);
     s.yugle.jobs[0].xp.subscribe(F);
-    var Y = new n.Achievement("achievement_carmack", "Carmackesque", "Level 500 Programming Research", function () {
+    var Y = new n.Achievement("achievement_carmack", "程序猿", "编制程序研究500级", function () {
         return u.programming.xp.highestLevelEverIncludingThisLife()
     }, 500);
     u.programming.xp.subscribe(Y);
-    var J = new n.Achievement("achievement_donKnuth", "Knuthish", "Level 500 Algorithms Research", function () {
+    var J = new n.Achievement("achievement_donKnuth", "算死草", "算法研究500级", function () {
         return o.alg.xp.highestLevelEverIncludingThisLife()
     }, 500);
     o.alg.xp.subscribe(J);
-    var U = new n.Achievement("achievement_linus", "Linusian", "Level 500 Software Engineering", function () {
+    var U = new n.Achievement("achievement_linus", "加班狗", "编程研究500级", function () {
         return l.se.xp.highestLevelEverIncludingThisLife()
     }, 500);
     l.se.xp.subscribe(U);
-    var W = new n.Achievement("achievement_mayering", "Marissa?", "Level 10 Yugle CEO before Age 40", function () {
+    var W = new n.Achievement("achievement_mayering", "玛丽莎?", "在40岁钱升级10级优格总裁", function () {
         return s.yugleCeo.xp.getMinDaysToLevel(10)
     }, 7665, function (e, t) {
         return e <= t
     });
     s.yugleCeo.xp.subscribe(W);
-    var X = new n.AG("ag_yugle", "Path of the Code Monkey", [H, F, W, Y, J, U]);
+    var X = new n.AG("ag_yugle", "程序猿之路", [H, F, W, Y, J, U]);
     g.push(X);
-    var Q = new n.Achievement("achievement_happy", "Happy", "Be at least 1.8 Happy", function () {
+    var Q = new n.Achievement("achievement_happy", "幸福", "幸福指数达到1.8", function () {
         return d.happinessStat.state.highestEffectiveEver
     }, 1.8);
     d.happinessStat.subscribe(Q);
-    var Z = new n.Achievement("achievement_miserable", "Miserable", "Be less than 0.1 Happy", function () {
+    var Z = new n.Achievement("achievement_miserable", "不幸", "幸福指数低于0.1", function () {
         return d.happinessStat.state.lowestEffectiveEver
     }, .1, function (e, t) {
         return e <= t
     });
     d.happinessStat.subscribe(Z);
-    var $ = new n.AG("ag_mood", "Mood", [Q, Z]);
+    var $ = new n.AG("ag_mood", "情绪", [Q, Z]);
     g.push($);
-    var q = new n.Achievement("achievement_dark_plateau", "Welcome...", "...to the Dark Plateau Transit System", function () {
+    var q = new n.Achievement("achievement_dark_plateau", "欢迎你...", "...来到黑暗森林运输系统", function () {
         return y.labCleaner.xp.highestLevelEverIncludingThisLife()
     }, 1);
     y.labCleaner.xp.subscribe(q);
-    var K = new n.Achievement("achievement_freeman", "Gordon", "Unlock the Greek Letter Complex", function () {
+    var K = new n.Achievement("achievement_freeman", "戈登", "解锁希腊字母情结", function () {
         return y.lambdaComplexTrainee.xp.highestLevelEverIncludingThisLife()
     }, 1);
     y.lambdaComplexTrainee.xp.subscribe(K);
-    var ee = new n.Achievement("achievement_not_breen", "Kleiner", "Level 10 Dark Plateau CEO", function () {
+    var ee = new n.Achievement("achievement_not_breen", "克莱纳", "10级黑暗森林总裁", function () {
         return y.darkPlateauCeo.xp.highestLevelEverIncludingThisLife()
     }, 10);
     y.darkPlateauCeo.xp.subscribe(ee);
-    var te = new n.Achievement("achievement_laser_gun", "Planetary Gunslinger", "Level 1 Lasergun", function () {
+    var te = new n.Achievement("achievement_laser_gun", "行星枪手", "1级激光枪", function () {
         return _.laserGun.xp.highestLevelEverIncludingThisLife()
     }, 1);
     _.laserGun.xp.subscribe(te);
-    var ae = new n.Achievement("achievement_groundhog_king", "Groundhog King", "Use the LoopTrapDevice in two lives in a row", function () {
+    var ae = new n.Achievement("achievement_groundhog_king", "游戏王", "连续两次轮回使用循环诱捕装置", function () {
         return i.currentLifeThisLoop.minLivesToLoopTrap.getValue()
     }, 1, function (e, t) {
         return e <= t
     });
     i.currentLifeThisLoop.subscribe(ae);
-    var ne = new n.AG("ag_lambda", "Path of the Physicist", [q, K, ee, te, ae]);
+    var ne = new n.AG("ag_lambda", "物理学家之路", [q, K, ee, te, ae]);
     g.push(ne)
 }, function (e, t, a) {
     "use strict";
