@@ -2201,8 +2201,8 @@ webpackJsonp([1, 0], [function (e, t, a) {
             function t() {
                 (0, y.default)(this, t);
                 var e = (0, d.default)(this, (t.__proto__ || (0, o.default)(t)).call(this, "battle", "Battle", new T));
-                e.laserGunDamage = new g.Stat("laserGunDamage", "Laser Gun Damage", .01, 2, "", "");
-                var a = new M.LevelAddMultModifier("lg_dmg_mod", "Laser Gun Research", 10, b.laserGun.xp, .1);
+                e.laserGunDamage = new g.Stat("laserGunDamage", "激光枪伤害", .01, 2, "", "");
+                var a = new M.LevelAddMultModifier("lg_dmg_mod", "激光枪研究", 10, b.laserGun.xp, .1);
                 return e.laserGunDamage.addModifier(a), e.earthX = 200, e.earthY = 200, e.earthImage = new Image, e.earthImage.src = x.default, e
             }
             return (0, p.default)(t, e), (0, l.default)(t, [{
@@ -2237,7 +2237,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
             }, {
                 key: "startWaves",
                 value: function () {
-                    this.state.alienComm.unshift("EXHIBIT IS RESISTING"), this.state.wave = 0
+                    this.state.alienComm.unshift("正在进行抵抗"), this.state.wave = 0
                 }
             }, {
                 key: "startWave",
@@ -2246,19 +2246,23 @@ webpackJsonp([1, 0], [function (e, t, a) {
                     var e = this.state.wave;
                     switch (this.state.waveTicks = 0, e) {
                         case 3:
-                            this.state.alienComm.unshift("OVERWHELM");
+                            this.state.alienComm.unshift("覆没");
                             break;
                         case 11:
-                            this.state.alienComm.unshift("SEND HEAVY ARMOR");
+                            this.state.alienComm.unshift("派遣重型武装");
                             break;
                         case 25:
-                            this.state.alienComm.unshift("EXHIBIT UNUSUALLY STRONG. RECORD MISMATCH.");
+                            this.state.alienComm.unshift("表现异常强烈.记录不匹配.");
                             break;
                         case 50:
-                            this.state.alienComm.unshift("SEND IN HEADKEEPER 1");
+                            this.state.alienComm.unshift("派遣主管 1");
                             break;
                         case 75:
-                            this.state.alienComm.unshift("PLAYER - I THINK YOU FINISHED THIS GAME"), this.state.alienComm.unshift("STAY TUNED FOR UPDATES"), this.state.alienComm.unshift("IF YOU REALLY LIKE THE GAME, THERE IS A DEV BLOG ON PATREON"), this.state.alienComm.unshift("https://www.patreon.com/mgronbach")
+                            this.state.alienComm.unshift("玩家 - 我觉得你打通了这个游戏"),
+                            this.state.alienComm.unshift("敬请期待更新"),
+                            this.state.alienComm.unshift("如果你非常喜欢这个游戏,下面是开发博客"),
+                            this.state.alienComm.unshift("https://www.patreon.com/mgronbach")
+                            
                     }
                     for (var t = e % 7 === 0, a = e % 11 === 0, n = e % 3 === 0, i = e % 50 === 0, r = 5 * Math.pow(e, 1.04) * (a ? 2 : 1) * (i ? 20 : 1), s = k.currentYear.getValue() < 42 ? L : 10 * L * (t ? 3 : 1) * (i ? 5 : 1), o = i ? 1 : 8 * (n ? 2 : 1), u = 0; u < o; u++) {
                         var l = Math.random() - .5,
