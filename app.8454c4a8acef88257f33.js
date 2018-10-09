@@ -1202,7 +1202,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
         l = (t.readingPane = new s.Pane("reading-pane", "阅读", "study-fields", o), t.labPanes = new s.PaneGroup),
         c = (t.researchPane = new s.Pane("research-pane", "研究", "research-display", l), t.queuePane = new s.Pane("queue-pane", "队列", "queue-display", l), t.labPane = new s.Pane("lab-pane", "实验室", "lab-display", o, !1, l.panes)),
         d = t.lambdaPanes = new s.PaneGroup,
-        f = (t.warPane = new s.Pane("war-pane", "战争", "war-display", d), t.loopTrapPane = new s.Pane("looptrap-pane", "循环陷阱", "looptrap-display", d), t.lambdaPane = new s.Pane("lambda-pane", "Lambda", "lambda-display", o, !1, d.panes)),
+        f = (t.warPane = new s.Pane("war-pane", "战争", "war-display", d), t.loopTrapPane = new s.Pane("looptrap-pane", "循环陷阱", "looptrap-display", d), t.lambdaPane = new s.Pane("lambda-pane", "λ", "lambda-display", o, !1, d.panes)),
         v = new s.PaneGroup,
         h = (t.happinessPane = new s.Pane("happiness-pane", "你", "happiness-explain", v), t.healthPane = new s.Pane("health-pane", "健康", "health-display", v), t.housingPane = new s.Pane("housing-pane", "家", "housing-display", v), t.boostsPane = new s.Pane("boosts-pane", "提神", "boosts-display", v), t.lifestylePane = new s.Pane("lifestyle-pane", "生活方式", "lifestyle-display", o, !1, v.panes)),
         p = t.eventPane = new s.Pane("event-pane", "事件", "events-display", o),
@@ -6925,7 +6925,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
                         if (c) throw d
                     }
                 }
-                var m = "Wave: " + this.battle.state.wave,
+                var m = "波次: " + this.battle.state.wave,
                     y = "",
                     _ = "";
                 t.font = "15px Arial", t.fillStyle = "white", t.fillRect(1, 1, t.measureText(m).width + 6, 22), o && (_ = (0, l.formatDays)(Math.floor(this.battle.state.target.earthDistance / this.battle.state.target.speed)), y = "HP: " + this.abbr(this.battle.state.target.health) + "/" + this.abbr(this.battle.state.target.maxHealth), t.fillRect(a - 140, 1, 139, 42), t.fillRect(1, n - 25, 100, 24)), t.fillStyle = "black", t.fillText(m, 5, 20), o && (t.fillText(_, a - 140, 20), t.fillText("until Arrival", a - 100, 40), t.fillText(y, 5, n - 10)), t.strokeStyle = "black", t.lineWidth = 1, t.strokeRect(0, 0, e.width, e.height)
