@@ -7746,7 +7746,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
                 staticStyle: {
                     "padding-top": "20px"
                 }
-            }, [a("small", [e._v("已保存，在 " + e._s(e.timeSinceLastSave()) + "之前")])])], 1)
+            }, [a("small", [e._v("已保存，在 " + e._s(e.timeSinceLastSave()) + "秒前")])])], 1)
         },
         staticRenderFns: []
     }
