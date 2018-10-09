@@ -8127,7 +8127,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
                 attrs: {
                     "aria-hidden": "true"
                 }
-            }, [e._v("×")])]), e._v(" "), a("strong", [e._v("You went bankrupt!")]), e._v(" Your expenses were automatically reduced, and work hours increased."), a("br"), e._v("Your assistants were fired, and you moved back to your parents."), a("br"), e._v("\n  Take care of your finances!\n")]) : e._e()
+            }, [e._v("×")])]), e._v(" "), a("strong", [e._v("你破产了!")]), e._v(" 你的开销自动减少了,工作时间增加了。"), a("br"), e._v("你的助手被解雇了,你又搬回父母家了."), a("br"), e._v("\n  管理好你的财务!\n")]) : e._e()
         },
         staticRenderFns: []
     }
