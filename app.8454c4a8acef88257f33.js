@@ -3158,8 +3158,8 @@ webpackJsonp([1, 0], [function (e, t, a) {
         p = function (e) {
             function t() {
                 (0, d.default)(this, t);
-                var e = (0, o.default)(this, (t.__proto__ || (0, r.default)(t)).call(this, "looptrap", "循环陷阱", new h));
-                return e.efficiency = new v.Stat("lt_efficiency", "Efficiency", 0, 4), e
+                var e = (0, o.default)(this, (t.__proto__ || (0, r.default)(t)).call(this, "looptrap", "循环诱捕", new h));
+                return e.efficiency = new v.Stat("lt_efficiency", "效率", 0, 4), e
             }
             return (0, l.default)(t, e), t
         }(f.BasicEntity);
