@@ -5109,7 +5109,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
         T = function (e) {
             function t() {
                 (0, y.default)(this, t);
-                var e = (0, d.default)(this, (t.__proto__ || (0, o.default)(t)).call(this, "researchqueue", "Research Queue", new C));
+                var e = (0, d.default)(this, (t.__proto__ || (0, o.default)(t)).call(this, "researchqueue", "研究队列", new C));
                 return e.areas = [], e.internalId = 0, e
             }
             return (0, v.default)(t, e), (0, l.default)(t, [{
@@ -8832,7 +8832,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
                         class: t.xp.recordClass()
                     }, [a("td", [e._v(e._s(t.name))]), e._v(" "), a("td", [e._v(e._s(Math.max(t.xp.state.highestLevelThisLoop, t.xp.state.level)))]), e._v(" "), a("td", [e._v(e._s(e.abbr(t.xp.futurePrestigeFactor())))]), e._v(" "), a("td", [e._v(e._s(e.abbr(t.xp.state.loopTrapMultiplier)))]), e._v(" "), a("td", [e._v(e._s(e.abbr(t.xp.state.loopTrapMultiplier + t.xp.futurePrestigeFactor() * e.loopTrap.efficiency.effective)))])]) : e._e()
                 })], 2), e._v(" "), a("br")]) : e._e()
-            }), e._v(" "), a("br"), e._v(" "), a("h3", [e._v("Research")]), e._v(" "), e._l(e.fields, function (t) {
+            }), e._v(" "), a("br"), e._v(" "), a("h3", [e._v("研究")]), e._v(" "), e._l(e.fields, function (t) {
                 return a("div", [a("div", {
                     staticClass: "row"
                 }, [a("h5", [e._v(e._s(t.name))])]), e._v(" "), a("table", [e._m(1, !0), e._v(" "), e._l(t.areas, function (t) {
@@ -9938,7 +9938,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
                 attrs: {
                     role: "alert"
                 }
-            }, [a("strong", [e._v("Warning!")]), e._v(" Experiencing major time dilation. Check your events.\n  ")])
+            }, [a("strong", [e._v("警告!")]), e._v(" 出现大的时间膨胀。 检查你的事件。\n  ")])
         }]
     }
 }, function (e, t) {
@@ -9980,7 +9980,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
                 attrs: {
                     role: "alert"
                 }
-            }, [e._v("\n     You just turned 18. Again. Expertise from previous lives makes things easier this time.\n  ")])]) : e._e()
+            }, [e._v("\n     你重生到了18岁。 这次来自前世的专业知识使事情变得更容易。\n  ")])]) : e._e()
         },
         staticRenderFns: []
     }
