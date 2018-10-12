@@ -1798,7 +1798,7 @@ webpackJsonp([1, 0], [function (e, t, a) {
                 var t = this.xpPerHourStat.effective * e / 60;
                 for (this.levelUp = 0; t > 0;) {
                     var a = this.nextLevelAtXp(this.state.level);
-                    t + this.state.xp >= a ? (t -= a - this.state.xp, this.state.level += 1, this.updateMinDaysToLevel(), this.state.xp = 0, this.levelUp += 1) : (this.state.xp += t, t = 0), this.levelUp >= 10 && (t = 0)
+                    t + this.state.xp >= a ? (t -= a - this.state.xp, this.state.level += 1, this.updateMinDaysToLevel(), this.state.xp = 0, this.levelUp += 1) : (this.state.xp += t, t = 0), this.levelUp >= 1000 && (t = 0)
                 }
                 this.levelUp > 0 && (this.lastLevelUp = y.currentDay.getValue(), this.update())
             }
